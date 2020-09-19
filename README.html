@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 id="st558-project-1-nhl-records--stats-analysis">ST558 Project 1: NHL Records &amp; Stats Analysis</h1>
+<p>Lynn Huang September 18, 2020</p>
+<ul>
+<li><a href="#getting-started-with-nhl-records-nhl-stats-apis">Getting Started with NHL Records &amp; NHL Stats APIs</a>
+<ul>
+<li><a href="#required-packages">Required Packages</a></li>
+<li><a href="#functions">Functions</a>
+<ul>
+<li><a href="#functions-for-nhl-records">Functions for NHL Records</a></li>
+<li><a href="#function-for-nhl-stats">Function for NHL Stats</a></li>
+<li><a href="#wrapper-function">Wrapper Function</a></li>
+</ul></li>
+<li><a href="#exploratory-data-analysis">Exploratory Data Analysis</a>
+<ul>
+<li><a href="#join">Join</a></li>
+<li><a href="#create-new-variables">Create New Variables</a></li>
+<li><a href="#goalies-contingency-tables-numerical-summaries-graphical-summaries">Goalies: Contingency Tables, Numerical Summaries, Graphical Summaries</a></li>
+<li><a href="#skaters-contingency-tables-numerical-summaries-graphical-summaries">Skaters: Contingency Tables, Numerical Summaries, Graphical Summaries</a></li>
+<li><a href="#franchises-teams-more-plots">Franchises &amp; Teams: More Plots</a></li>
+</ul></li>
+</ul></li>
+</ul>
+<h1 id="getting-started-with-nhl-records--nhl-stats-apis">Getting Started with NHL Records &amp; NHL Stats APIs</h1>
+<p>This vignette examines how to access the NHL Records API data as hosted <a href="https://gitlab.com/dword4/nhlapi/-/blob/master/records-api.md">here</a> and the NHL Stats API data as hosted <a href="https://gitlab.com/dword4/nhlapi/-/blob/master/stats-api.md">here</a>.<br />
+All queries are prefixed with the base URL <code>https://records.nhl.com/site/api</code> or the base URL <code>https://statsapi.web.nhl.com/api/v1/</code> and are GET requests. The data is returned in JSON form.<br />
+Information is available about items such as:</p>
+<ul>
+<li>Franchises and Teams</li>
+<li>Players, Drafts, Awards, and Milestones</li>
+<li>Trophies, Playoffs, and Win-Loss Records</li>
+</ul>
+<h2 id="required-packages">Required Packages</h2>
+<p>The following packages are required or highly recommended:</p>
+<ul>
+<li>knitr</li>
+<li>tidyverse</li>
+<li>jsonlite</li>
+<li>ggplot2</li>
+</ul>
+<h2 id="functions">Functions</h2>
+<h3 id="functions-for-nhl-records">Functions for NHL Records</h3>
+<p>Functions are available to contact the NHL Records API and return well-formatted, parsed data for:</p>
+<ul>
+<li>Franchise: Team IDs, first and last seasons, and names for every team in the history of the NHL</li>
+<li>Franchise Team Totals: Total Wins, Losses, and Ties for every franchise</li>
+<li>Franchise Season Records: Season Wins, Losses, and Ties for every franchise</li>
+<li>Franchise Goalie Records</li>
+<li>Franchise Skater Records</li>
+</ul>
+<p>Filter Information:</p>
+<ul>
+<li>Franchise ID. EX: franchId=1 returns information about the Montreal Canadiens
+<ul>
+<li>The last 3 functions only accept franchiseID queries!</li>
+<li>The last 3 functions only accept single franchiseId queries!</li>
+</ul></li>
+<li>Franchise Name. EX: franchName=“Montréal Canadiens” returns information about the Montreal Canadiens
+<ul>
+<li>Note that neither “Montréal” (nor “Montreal”) nor “Canadiens” will work on their own</li>
+</ul></li>
+<li>Multiple IDs or Multiple Names are permitted</li>
+</ul>
+<!-- end list -->
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">recordsBaseURL &lt;-<span class="st"> &quot;https://records.nhl.com/site/api/&quot;</span></a>
+<a class="sourceLine" id="cb1-2" title="2"></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="co"># Function for /franchise (id, firstSeasonId, lastSeasonId, name)</span></a>
+<a class="sourceLine" id="cb1-4" title="4">getFranchise &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">franchId=</span><span class="ot">NULL</span>, <span class="dt">franchName=</span><span class="ot">NULL</span>) {</a>
+<a class="sourceLine" id="cb1-5" title="5">  value &lt;-<span class="st"> &quot;franchise&quot;</span></a>
+<a class="sourceLine" id="cb1-6" title="6">  URL &lt;-<span class="st"> </span><span class="kw">paste0</span>(recordsBaseURL, value)</a>
+<a class="sourceLine" id="cb1-7" title="7">  apiData &lt;-<span class="st"> </span>jsonlite<span class="op">::</span><span class="kw">fromJSON</span>(URL)</a>
+<a class="sourceLine" id="cb1-8" title="8">  api.df &lt;-<span class="st"> </span><span class="kw">as_tibble</span>(apiData[[<span class="dv">1</span>]])</a>
+<a class="sourceLine" id="cb1-9" title="9">  <span class="co"># If available, filter by franchId</span></a>
+<a class="sourceLine" id="cb1-10" title="10">  <span class="cf">if</span> (<span class="op">!</span><span class="kw">is.null</span>(franchId)) {</a>
+<a class="sourceLine" id="cb1-11" title="11">    api.df &lt;-<span class="st"> </span>api.df <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(id <span class="op">%in%</span><span class="st"> </span>franchId)</a>
+<a class="sourceLine" id="cb1-12" title="12">  }</a>
+<a class="sourceLine" id="cb1-13" title="13">  <span class="co"># If available, filter by franchName (not the same as teamCommonName!)</span></a>
+<a class="sourceLine" id="cb1-14" title="14">  <span class="cf">if</span> (<span class="op">!</span><span class="kw">is.null</span>(franchName)) {</a>
+<a class="sourceLine" id="cb1-15" title="15">    <span class="co"># Split each franchName string into tokens and grab the last element only for teamCommonName</span></a>
+<a class="sourceLine" id="cb1-16" title="16">    fns &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="st">&quot;&quot;</span>, <span class="kw">length</span>(franchName))</a>
+<a class="sourceLine" id="cb1-17" title="17">    <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(franchName)){</a>
+<a class="sourceLine" id="cb1-18" title="18">      fn.tokens &lt;-<span class="st"> </span><span class="kw">strsplit</span>(franchName[i], <span class="st">&quot; &quot;</span>)</a>
+<a class="sourceLine" id="cb1-19" title="19">      fns[i] &lt;-<span class="st"> </span><span class="kw">tail</span>(fn.tokens[[<span class="dv">1</span>]], <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb1-20" title="20">    }</a>
+<a class="sourceLine" id="cb1-21" title="21">    api.df &lt;-<span class="st"> </span>api.df <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(teamCommonName <span class="op">%in%</span><span class="st"> </span>fns)</a>
+<a class="sourceLine" id="cb1-22" title="22">  }</a>
+<a class="sourceLine" id="cb1-23" title="23">  <span class="kw">return</span>(api.df)</a>
+<a class="sourceLine" id="cb1-24" title="24">}</a>
+<a class="sourceLine" id="cb1-25" title="25"><span class="co"># getFranchise()</span></a>
+<a class="sourceLine" id="cb1-26" title="26"><span class="co"># getFranchise(franchId=fid)</span></a>
+<a class="sourceLine" id="cb1-27" title="27"><span class="co"># getFranchise(franchName=fn)</span></a>
+<a class="sourceLine" id="cb1-28" title="28"><span class="co"># getFranchise(franchId=fid, franchName=fn)</span></a>
+<a class="sourceLine" id="cb1-29" title="29"></a>
+<a class="sourceLine" id="cb1-30" title="30"><span class="co"># Function for /franchise-team-totals (total stats)</span></a>
+<a class="sourceLine" id="cb1-31" title="31">getFranchiseTeamTotals &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">franchId=</span><span class="ot">NULL</span>, <span class="dt">franchName=</span><span class="ot">NULL</span>) {</a>
+<a class="sourceLine" id="cb1-32" title="32">  value &lt;-<span class="st"> &quot;franchise-team-totals&quot;</span></a>
+<a class="sourceLine" id="cb1-33" title="33">  URL &lt;-<span class="st"> </span><span class="kw">paste0</span>(recordsBaseURL, value)</a>
+<a class="sourceLine" id="cb1-34" title="34">  apiData &lt;-<span class="st"> </span>jsonlite<span class="op">::</span><span class="kw">fromJSON</span>(URL)</a>
+<a class="sourceLine" id="cb1-35" title="35">  api.df &lt;-<span class="st"> </span><span class="kw">as_tibble</span>(apiData[[<span class="dv">1</span>]])</a>
+<a class="sourceLine" id="cb1-36" title="36">  <span class="co"># If available, filter by franchId</span></a>
+<a class="sourceLine" id="cb1-37" title="37">  <span class="cf">if</span> (<span class="op">!</span><span class="kw">is.null</span>(franchId)) {</a>
+<a class="sourceLine" id="cb1-38" title="38">    api.df &lt;-<span class="st"> </span>api.df <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(franchiseId <span class="op">%in%</span><span class="st"> </span>franchId)</a>
+<a class="sourceLine" id="cb1-39" title="39">  }</a>
+<a class="sourceLine" id="cb1-40" title="40">  <span class="co"># If available, filter by franchName (same as teamName)</span></a>
+<a class="sourceLine" id="cb1-41" title="41">  <span class="cf">if</span> (<span class="op">!</span><span class="kw">is.null</span>(franchName)) {</a>
+<a class="sourceLine" id="cb1-42" title="42">    api.df &lt;-<span class="st"> </span>api.df <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(teamName <span class="op">%in%</span><span class="st"> </span>franchName)</a>
+<a class="sourceLine" id="cb1-43" title="43">  }</a>
+<a class="sourceLine" id="cb1-44" title="44">  <span class="kw">return</span>(api.df)</a>
+<a class="sourceLine" id="cb1-45" title="45">}</a>
+<a class="sourceLine" id="cb1-46" title="46"><span class="co"># getFranchiseTeamTotals()</span></a>
+<a class="sourceLine" id="cb1-47" title="47"><span class="co"># getFranchiseTeamTotals(franchId=fid)</span></a>
+<a class="sourceLine" id="cb1-48" title="48"><span class="co"># getFranchiseTeamTotals(franchName=fn)</span></a>
+<a class="sourceLine" id="cb1-49" title="49"><span class="co"># getFranchiseTeamTotals(franchId=fid, franchName=fn)</span></a>
+<a class="sourceLine" id="cb1-50" title="50"></a>
+<a class="sourceLine" id="cb1-51" title="51"><span class="co"># Function for /franchise-season-records (franchise-specific season records)</span></a>
+<a class="sourceLine" id="cb1-52" title="52">getFranchiseSeasonTotals &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">franchId=</span><span class="ot">NULL</span>) {</a>
+<a class="sourceLine" id="cb1-53" title="53">  <span class="co"># Complain that you don&#39;t have franchId, which seems like it&#39;s required for this endpoint</span></a>
+<a class="sourceLine" id="cb1-54" title="54">  <span class="cf">if</span> (<span class="kw">is.null</span>(franchId)) {</a>
+<a class="sourceLine" id="cb1-55" title="55">    <span class="kw">stop</span>(<span class="st">&quot;I need a franchiseId!&quot;</span>)</a>
+<a class="sourceLine" id="cb1-56" title="56">  }</a>
+<a class="sourceLine" id="cb1-57" title="57">  value &lt;-<span class="st"> &quot;franchise-season-records?cayenneExp=franchiseId=&quot;</span></a>
+<a class="sourceLine" id="cb1-58" title="58">  URL &lt;-<span class="st"> </span><span class="kw">paste0</span>(recordsBaseURL, value, franchId)</a>
+<a class="sourceLine" id="cb1-59" title="59">  apiData &lt;-<span class="st"> </span>jsonlite<span class="op">::</span><span class="kw">fromJSON</span>(URL)</a>
+<a class="sourceLine" id="cb1-60" title="60">  api.df &lt;-<span class="st"> </span><span class="kw">as_tibble</span>(apiData[[<span class="dv">1</span>]])</a>
+<a class="sourceLine" id="cb1-61" title="61">  <span class="kw">return</span>(api.df)</a>
+<a class="sourceLine" id="cb1-62" title="62">}</a>
+<a class="sourceLine" id="cb1-63" title="63"><span class="co"># fid=1</span></a>
+<a class="sourceLine" id="cb1-64" title="64"><span class="co"># getFranchiseSeasonTotals()</span></a>
+<a class="sourceLine" id="cb1-65" title="65"><span class="co"># getFranchiseSeasonTotals(franchId=fid)</span></a>
+<a class="sourceLine" id="cb1-66" title="66"></a>
+<a class="sourceLine" id="cb1-67" title="67"><span class="co"># Function for /franchise-goalie-records (franchise-specific goalie records)</span></a>
+<a class="sourceLine" id="cb1-68" title="68">getFranchiseGoalieRecords &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">franchId=</span><span class="ot">NULL</span>) {</a>
+<a class="sourceLine" id="cb1-69" title="69">  <span class="co"># Complain that you don&#39;t have franchId, which seems like it&#39;s required for this endpoint</span></a>
+<a class="sourceLine" id="cb1-70" title="70">  <span class="cf">if</span> (<span class="kw">is.null</span>(franchId)) {</a>
+<a class="sourceLine" id="cb1-71" title="71">    <span class="kw">stop</span>(<span class="st">&quot;I need a franchiseId!&quot;</span>)</a>
+<a class="sourceLine" id="cb1-72" title="72">  }</a>
+<a class="sourceLine" id="cb1-73" title="73">  value &lt;-<span class="st"> &quot;franchise-goalie-records?cayenneExp=franchiseId=&quot;</span></a>
+<a class="sourceLine" id="cb1-74" title="74">  URL &lt;-<span class="st"> </span><span class="kw">paste0</span>(recordsBaseURL, value, franchId)</a>
+<a class="sourceLine" id="cb1-75" title="75">  apiData &lt;-<span class="st"> </span>jsonlite<span class="op">::</span><span class="kw">fromJSON</span>(URL)</a>
+<a class="sourceLine" id="cb1-76" title="76">  api.df &lt;-<span class="st"> </span><span class="kw">as_tibble</span>(apiData[[<span class="dv">1</span>]])</a>
+<a class="sourceLine" id="cb1-77" title="77">  <span class="kw">return</span>(api.df)</a>
+<a class="sourceLine" id="cb1-78" title="78">}</a>
+<a class="sourceLine" id="cb1-79" title="79"><span class="co"># getFranchiseGoalieRecords()</span></a>
+<a class="sourceLine" id="cb1-80" title="80"><span class="co"># getFranchiseGoalieRecords(franchId=fid)</span></a>
+<a class="sourceLine" id="cb1-81" title="81"></a>
+<a class="sourceLine" id="cb1-82" title="82"><span class="co"># Function for /franchise-skater-records (franchise-specific skater records)</span></a>
+<a class="sourceLine" id="cb1-83" title="83">getFranchiseSkaterRecords &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">franchId=</span><span class="ot">NULL</span>) {</a>
+<a class="sourceLine" id="cb1-84" title="84">  <span class="co"># Complain that you don&#39;t have franchId, which seems like it&#39;s required for this endpoint</span></a>
+<a class="sourceLine" id="cb1-85" title="85">  <span class="cf">if</span> (<span class="kw">is.null</span>(franchId)) {</a>
+<a class="sourceLine" id="cb1-86" title="86">    <span class="kw">stop</span>(<span class="st">&quot;I need a franchiseId!&quot;</span>)</a>
+<a class="sourceLine" id="cb1-87" title="87">  }</a>
+<a class="sourceLine" id="cb1-88" title="88">  value &lt;-<span class="st"> &quot;franchise-skater-records?cayenneExp=franchiseId=&quot;</span></a>
+<a class="sourceLine" id="cb1-89" title="89">  URL &lt;-<span class="st"> </span><span class="kw">paste0</span>(recordsBaseURL, value, franchId)</a>
+<a class="sourceLine" id="cb1-90" title="90">  apiData &lt;-<span class="st"> </span>jsonlite<span class="op">::</span><span class="kw">fromJSON</span>(URL)</a>
+<a class="sourceLine" id="cb1-91" title="91">  api.df &lt;-<span class="st"> </span><span class="kw">as_tibble</span>(apiData[[<span class="dv">1</span>]])</a>
+<a class="sourceLine" id="cb1-92" title="92">  <span class="kw">return</span>(api.df)</a>
+<a class="sourceLine" id="cb1-93" title="93">}</a>
+<a class="sourceLine" id="cb1-94" title="94"><span class="co"># getFranchiseSkaterRecords()</span></a>
+<a class="sourceLine" id="cb1-95" title="95"><span class="co"># getFranchiseSkaterRecords(franchId=fid)</span></a></code></pre></div>
+<h3 id="function-for-nhl-stats">Function for NHL Stats</h3>
+<p>A function is also available to contact the NHL Stats API and return well-formatted, parsed data for:</p>
+<ul>
+<li>Teams: Team IDs, venues, divisions, etc. for every team in the history of the NHL</li>
+</ul>
+<p>Please note that you can filter the results returned specifically for these expanded modifiers. It is suggested that you filter, unless you want a big, ugly dataframe with all the possible information you could ever want to parse:</p>
+<ul>
+<li>Team ID - This is different than franchiseId
+<ul>
+<li>teamId=1 is “New Jersey Devils” whereas franchiseId=1 is “Montréal Canadiens”</li>
+<li>Multiple teamId’s can be provided as a vector of numbers</li>
+</ul></li>
+<li>Season - The two-year identifier for an NHL season
+<ul>
+<li>season=“20192020” will get info for 2019-2020 season</li>
+<li>The API’s default is to return the current season info (so, 2019-2020)</li>
+</ul></li>
+<li>Team Roster - Roster of active players (if specified, for teamId and season)
+<ul>
+<li>Return: A dataframe or list of dataframes if multiple teamId’s specified</li>
+</ul></li>
+<li>Person Names - Just player names (if provided, for teamId)
+<ul>
+<li>Return: A dataframe of team name and info (each row)</li>
+</ul></li>
+<li>Team Schedule Next - Details of upcoming games (if provided, for teamId)
+<ul>
+<li>Not all teams have upcoming games, try teamId=14 (worked as of 9-18-2020)</li>
+<li>Return: A dataframe or list of dataframes if multiple teamId’s specified</li>
+</ul></li>
+<li>Team Schedule Previous - Details of previous games (if provided, for teamId)
+<ul>
+<li>Return: A dataframe or list of dataframes if multiple teamId’s specified</li>
+</ul></li>
+<li>Team Stats - Team win/loss/tie type of stats (if provided, for teamId)
+<ul>
+<li>Return: A dataframe (of dataframes/lists)</li>
+</ul></li>
+<li>statsSingleSeasonPlayoffs (ignored due to unclear documentation in the NHL Stats API)</li>
+</ul>
+<p>You may only select teamRoster OR personNames or teamSchedNext or teamSchedPrev or teamStats, not a combination of them.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1">statsBaseURL &lt;-<span class="st"> &quot;https://statsapi.web.nhl.com/api/v1/teams&quot;</span></a>
+<a class="sourceLine" id="cb2-2" title="2"></a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="co"># First, a helper function to append teamId and season modifiers to the other 5 stats modifiers</span></a>
+<a class="sourceLine" id="cb2-4" title="4">getStatsHelper &lt;-<span class="st"> </span><span class="cf">function</span>(URL, <span class="dt">teamId=</span><span class="ot">NULL</span>, <span class="dt">season=</span><span class="ot">NULL</span>) {</a>
+<a class="sourceLine" id="cb2-5" title="5">  <span class="co"># Update with teamId and season data if applicable</span></a>
+<a class="sourceLine" id="cb2-6" title="6">  <span class="cf">if</span> (<span class="op">!</span><span class="kw">is.null</span>(teamId)) {</a>
+<a class="sourceLine" id="cb2-7" title="7">    tids &lt;-<span class="st"> </span><span class="kw">as.character</span>(teamId[<span class="dv">1</span>])</a>
+<a class="sourceLine" id="cb2-8" title="8">    <span class="cf">if</span> (<span class="kw">length</span>(teamId) <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>) {</a>
+<a class="sourceLine" id="cb2-9" title="9">      <span class="cf">for</span> (t <span class="cf">in</span> <span class="dv">2</span><span class="op">:</span><span class="kw">length</span>(teamId)) {</a>
+<a class="sourceLine" id="cb2-10" title="10">        tids &lt;-<span class="st"> </span><span class="kw">paste0</span>(tids, <span class="st">&quot;,&quot;</span>, teamId[t])</a>
+<a class="sourceLine" id="cb2-11" title="11">      }</a>
+<a class="sourceLine" id="cb2-12" title="12">    }</a>
+<a class="sourceLine" id="cb2-13" title="13">    URL &lt;-<span class="st"> </span><span class="kw">paste0</span>(URL, <span class="st">&quot;&amp;teamId=&quot;</span>, tids)</a>
+<a class="sourceLine" id="cb2-14" title="14">  }</a>
+<a class="sourceLine" id="cb2-15" title="15">  <span class="cf">if</span> (<span class="op">!</span><span class="kw">is.null</span>(season)) {</a>
+<a class="sourceLine" id="cb2-16" title="16">    URL &lt;-<span class="st"> </span><span class="kw">paste0</span>(URL, <span class="st">&quot;&amp;season=&quot;</span>, season)</a>
+<a class="sourceLine" id="cb2-17" title="17">  }</a>
+<a class="sourceLine" id="cb2-18" title="18">  <span class="kw">return</span>(URL)</a>
+<a class="sourceLine" id="cb2-19" title="19">}</a>
+<a class="sourceLine" id="cb2-20" title="20"></a>
+<a class="sourceLine" id="cb2-21" title="21"><span class="co"># Second, the main function that actually gets API data</span></a>
+<a class="sourceLine" id="cb2-22" title="22">getStats &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">teamId=</span><span class="ot">NULL</span>, <span class="dt">season=</span><span class="ot">NULL</span>, <span class="dt">teamRoster=</span><span class="ot">FALSE</span>, <span class="dt">personNames=</span><span class="ot">FALSE</span>, </a>
+<a class="sourceLine" id="cb2-23" title="23">                    <span class="dt">teamSchedNext=</span><span class="ot">FALSE</span>, <span class="dt">teamSchedPrev=</span><span class="ot">FALSE</span>, <span class="dt">teamStats=</span><span class="ot">FALSE</span>) {</a>
+<a class="sourceLine" id="cb2-24" title="24">  <span class="co"># If only 1 teamId is provided (all modifiers are FALSE), don&#39;t use any modifiers</span></a>
+<a class="sourceLine" id="cb2-25" title="25">  <span class="cf">if</span> (<span class="op">!</span>teamRoster <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span>personNames <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span>teamSchedNext <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span>teamSchedPrev <span class="op">&amp;</span><span class="st"> </span><span class="op">!</span>teamStats <span class="op">&amp;</span><span class="st"> </span><span class="kw">length</span>(teamId)<span class="op">==</span><span class="dv">1</span>) {</a>
+<a class="sourceLine" id="cb2-26" title="26">    URL &lt;-<span class="st"> </span><span class="kw">paste0</span>(statsBaseURL, <span class="st">&quot;/&quot;</span>, teamId)</a>
+<a class="sourceLine" id="cb2-27" title="27">    apiData &lt;-<span class="st"> </span>jsonlite<span class="op">::</span><span class="kw">fromJSON</span>(URL)</a>
+<a class="sourceLine" id="cb2-28" title="28">    api.df &lt;-<span class="st"> </span><span class="kw">as_tibble</span>(apiData[[<span class="dv">2</span>]])</a>
+<a class="sourceLine" id="cb2-29" title="29">    <span class="kw">return</span>(api.df)</a>
+<a class="sourceLine" id="cb2-30" title="30">  }</a>
+<a class="sourceLine" id="cb2-31" title="31">  </a>
+<a class="sourceLine" id="cb2-32" title="32">  <span class="co"># If any modifiers are used with teamId and season, update URL before grabbing data from API</span></a>
+<a class="sourceLine" id="cb2-33" title="33">  <span class="cf">if</span> (teamRoster) {</a>
+<a class="sourceLine" id="cb2-34" title="34">    URL &lt;-<span class="st"> </span><span class="kw">paste0</span>(statsBaseURL, <span class="st">&quot;?expand=team.roster&quot;</span>)</a>
+<a class="sourceLine" id="cb2-35" title="35">    URL &lt;-<span class="st"> </span><span class="kw">getStatsHelper</span>(URL, teamId, season)</a>
+<a class="sourceLine" id="cb2-36" title="36">    apiData &lt;-<span class="st"> </span>jsonlite<span class="op">::</span><span class="kw">fromJSON</span>(URL)</a>
+<a class="sourceLine" id="cb2-37" title="37">    api.df &lt;-<span class="st"> </span>apiData[[<span class="dv">2</span>]]</a>
+<a class="sourceLine" id="cb2-38" title="38">    rosters &lt;-<span class="st"> </span>api.df<span class="op">$</span>roster<span class="op">$</span>roster</a>
+<a class="sourceLine" id="cb2-39" title="39">    <span class="kw">return</span>(rosters)</a>
+<a class="sourceLine" id="cb2-40" title="40">  }</a>
+<a class="sourceLine" id="cb2-41" title="41">  <span class="cf">else</span> <span class="cf">if</span> (personNames) {</a>
+<a class="sourceLine" id="cb2-42" title="42">    URL &lt;-<span class="st"> </span><span class="kw">paste0</span>(statsBaseURL, <span class="st">&quot;?expand=person.names&quot;</span>)</a>
+<a class="sourceLine" id="cb2-43" title="43">    URL &lt;-<span class="st"> </span><span class="kw">getStatsHelper</span>(URL, teamId, season)</a>
+<a class="sourceLine" id="cb2-44" title="44">    apiData &lt;-<span class="st"> </span>jsonlite<span class="op">::</span><span class="kw">fromJSON</span>(URL)</a>
+<a class="sourceLine" id="cb2-45" title="45">    api.df &lt;-<span class="st"> </span><span class="kw">as_tibble</span>(apiData[[<span class="dv">2</span>]])</a>
+<a class="sourceLine" id="cb2-46" title="46">    <span class="kw">return</span>(api.df)</a>
+<a class="sourceLine" id="cb2-47" title="47">    }</a>
+<a class="sourceLine" id="cb2-48" title="48">  <span class="cf">else</span> <span class="cf">if</span> (teamSchedNext) {</a>
+<a class="sourceLine" id="cb2-49" title="49">    URL &lt;-<span class="st"> </span><span class="kw">paste0</span>(statsBaseURL, <span class="st">&quot;?expand=team.schedule.next&quot;</span>)</a>
+<a class="sourceLine" id="cb2-50" title="50">    URL &lt;-<span class="st"> </span><span class="kw">getStatsHelper</span>(URL, teamId, season)</a>
+<a class="sourceLine" id="cb2-51" title="51">    apiData &lt;-<span class="st"> </span>jsonlite<span class="op">::</span><span class="kw">fromJSON</span>(URL)</a>
+<a class="sourceLine" id="cb2-52" title="52">    api.df &lt;-<span class="st"> </span><span class="kw">as_tibble</span>(apiData[[<span class="dv">2</span>]])</a>
+<a class="sourceLine" id="cb2-53" title="53">    nextGames &lt;-<span class="st"> </span>api.df<span class="op">$</span>nextGameSchedule<span class="op">$</span>dates</a>
+<a class="sourceLine" id="cb2-54" title="54">    <span class="kw">return</span>(nextGames)</a>
+<a class="sourceLine" id="cb2-55" title="55">    }</a>
+<a class="sourceLine" id="cb2-56" title="56">  <span class="cf">else</span> <span class="cf">if</span> (teamSchedPrev) {</a>
+<a class="sourceLine" id="cb2-57" title="57">    URL &lt;-<span class="st"> </span><span class="kw">paste0</span>(statsBaseURL, <span class="st">&quot;?expand=team.schedule.previous&quot;</span>)</a>
+<a class="sourceLine" id="cb2-58" title="58">    URL &lt;-<span class="st"> </span><span class="kw">getStatsHelper</span>(URL, teamId, season)</a>
+<a class="sourceLine" id="cb2-59" title="59">    apiData &lt;-<span class="st"> </span>jsonlite<span class="op">::</span><span class="kw">fromJSON</span>(URL)</a>
+<a class="sourceLine" id="cb2-60" title="60">    api.df &lt;-<span class="st"> </span><span class="kw">as_tibble</span>(apiData[[<span class="dv">2</span>]])</a>
+<a class="sourceLine" id="cb2-61" title="61">    prevGames &lt;-<span class="st"> </span>api.df<span class="op">$</span>previousGameSchedule<span class="op">$</span>dates</a>
+<a class="sourceLine" id="cb2-62" title="62">    <span class="kw">return</span>(prevGames)</a>
+<a class="sourceLine" id="cb2-63" title="63">    }</a>
+<a class="sourceLine" id="cb2-64" title="64">  <span class="cf">else</span> <span class="cf">if</span> (teamStats) {</a>
+<a class="sourceLine" id="cb2-65" title="65">    URL &lt;-<span class="st"> </span><span class="kw">paste0</span>(statsBaseURL, <span class="st">&quot;?expand=team.stats&quot;</span>)</a>
+<a class="sourceLine" id="cb2-66" title="66">    URL &lt;-<span class="st"> </span><span class="kw">getStatsHelper</span>(URL, teamId, season)</a>
+<a class="sourceLine" id="cb2-67" title="67">    apiData &lt;-<span class="st"> </span>jsonlite<span class="op">::</span><span class="kw">fromJSON</span>(URL)</a>
+<a class="sourceLine" id="cb2-68" title="68">    api.df &lt;-<span class="st"> </span>apiData[[<span class="dv">2</span>]]</a>
+<a class="sourceLine" id="cb2-69" title="69">    <span class="kw">return</span>(api.df)</a>
+<a class="sourceLine" id="cb2-70" title="70">    }</a>
+<a class="sourceLine" id="cb2-71" title="71">  <span class="cf">else</span> {</a>
+<a class="sourceLine" id="cb2-72" title="72">    URL &lt;-<span class="st"> </span>statsBaseURL</a>
+<a class="sourceLine" id="cb2-73" title="73">    apiData &lt;-<span class="st"> </span>jsonlite<span class="op">::</span><span class="kw">fromJSON</span>(URL)</a>
+<a class="sourceLine" id="cb2-74" title="74">    api.df &lt;-<span class="st"> </span>apiData[[<span class="dv">2</span>]]</a>
+<a class="sourceLine" id="cb2-75" title="75">    <span class="kw">return</span>(api.df)</a>
+<a class="sourceLine" id="cb2-76" title="76">  }</a>
+<a class="sourceLine" id="cb2-77" title="77">}</a>
+<a class="sourceLine" id="cb2-78" title="78"><span class="co"># rosters12 &lt;- getStats(teamId=c(1,2), season=&quot;20192020&quot;, teamRoster=TRUE)</span></a>
+<a class="sourceLine" id="cb2-79" title="79"><span class="co"># getStats(teamId=c(1,2), season=&quot;20192020&quot;, personNames=TRUE)</span></a>
+<a class="sourceLine" id="cb2-80" title="80"><span class="co"># getStats(teamId=c(1,14), season=&quot;20192020&quot;, teamSchedNext=TRUE)</span></a>
+<a class="sourceLine" id="cb2-81" title="81"><span class="co"># getStats(teamId=c(1,14), season=&quot;20192020&quot;, teamSchedPrev=TRUE)</span></a>
+<a class="sourceLine" id="cb2-82" title="82"><span class="co"># getStats(teamId=c(1,2), season=&quot;20192020&quot;, teamStats=TRUE)</span></a></code></pre></div>
+<h3 id="wrapper-function">Wrapper Function</h3>
+<p>Here is a on-stop-shop function to access any endpoint from the previous 6 functions. Input a funcType number from 1 to 6 for particular function calls, and provide optional arguments:</p>
+<ol>
+<li>Franchise (franchId, franchName)</li>
+<li>Franchise Goalie Records (franchId)</li>
+<li>Franchise Season Totals (franchId)</li>
+<li>Franchise Skater Records (franchId)</li>
+<li>Franchise Team Totals (franchId, franchName)</li>
+<li>Team and Season Level Stats (teamId, season, teamRoster, personNames, teamSchedNext, teamSchedPrev, teamStats)</li>
+</ol>
+<!-- end list -->
+
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1">getNHLData &lt;-<span class="st"> </span><span class="cf">function</span>(<span class="dt">funcType=</span><span class="kw">c</span>(<span class="st">&quot;franchise&quot;</span>, <span class="st">&quot;goalie&quot;</span>, <span class="st">&quot;season&quot;</span>, <span class="st">&quot;skater&quot;</span>, <span class="st">&quot;team&quot;</span>, <span class="st">&quot;stats&quot;</span>), ...) {</a>
+<a class="sourceLine" id="cb3-2" title="2">  <span class="cf">switch</span>(<span class="dt">EXPR=</span>funcType,</a>
+<a class="sourceLine" id="cb3-3" title="3">         <span class="dt">franchise =</span> <span class="kw">getFranchise</span>(...),</a>
+<a class="sourceLine" id="cb3-4" title="4">         <span class="dt">goalie =</span> <span class="kw">getFranchiseGoalieRecords</span>(...),</a>
+<a class="sourceLine" id="cb3-5" title="5">         <span class="dt">season =</span> <span class="kw">getFranchiseSeasonTotals</span>(...),</a>
+<a class="sourceLine" id="cb3-6" title="6">         <span class="dt">skater =</span> <span class="kw">getFranchiseSkaterRecords</span>(...),</a>
+<a class="sourceLine" id="cb3-7" title="7">         <span class="dt">team =</span> <span class="kw">getFranchiseTeamTotals</span>(...),</a>
+<a class="sourceLine" id="cb3-8" title="8">         <span class="dt">stats =</span> <span class="kw">getStats</span>(...))</a>
+<a class="sourceLine" id="cb3-9" title="9">}</a>
+<a class="sourceLine" id="cb3-10" title="10"><span class="co"># Testing</span></a>
+<a class="sourceLine" id="cb3-11" title="11"><span class="co"># f &lt;- getNHLData(&quot;franchise&quot;, franchId=14)</span></a>
+<a class="sourceLine" id="cb3-12" title="12"><span class="co"># fg &lt;- getNHLData(&quot;goalie&quot;, franchId=14)</span></a>
+<a class="sourceLine" id="cb3-13" title="13"><span class="co"># fs &lt;- getNHLData(&quot;season&quot;, franchId=14)</span></a>
+<a class="sourceLine" id="cb3-14" title="14"><span class="co"># fk &lt;- getNHLData(&quot;skater&quot;, franchId=14)</span></a>
+<a class="sourceLine" id="cb3-15" title="15"><span class="co"># ft &lt;- getNHLData(&quot;team&quot;, franchName=&quot;Los Angeles Kings&quot;)</span></a>
+<a class="sourceLine" id="cb3-16" title="16"><span class="co"># s &lt;- getNHLData(&quot;stats&quot;, teamId=26, teamRoster=TRUE)</span></a></code></pre></div>
+<h2 id="exploratory-data-analysis">Exploratory Data Analysis</h2>
+<p>I’m originally from Los Angeles, so let’s examine some of the data for the Los Angeles Kings. I still remember when they won the Stanley Cup in 2012 and 2014, and thinking how odd that we could win hockey tournaments during the longest drought in California (from 2011-2016).</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1">f &lt;-<span class="st"> </span><span class="kw">getNHLData</span>(<span class="st">&quot;franchise&quot;</span>, <span class="dt">franchId=</span><span class="dv">14</span>)</a></code></pre></div>
+<p>Their franchiseId is 14, teamId is 26, and they first started playing in the 19671968 and are still playing.</p>
+<h3 id="join">Join</h3>
+<p>We can join the information about Franchise Goalie Records and Franchise Skater Records (both from the Records API) with the team roster from the Stats API to get stats on the current team roster. Both of these are left joins, where we wish to keep all information in the first table (team roster from Stats API) and add information from the second table (either goalie records or skater records).</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">fg &lt;-<span class="st"> </span><span class="kw">getNHLData</span>(<span class="st">&quot;goalie&quot;</span>, <span class="dt">franchId=</span><span class="dv">14</span>)</a>
+<a class="sourceLine" id="cb5-2" title="2">fk &lt;-<span class="st"> </span><span class="kw">getNHLData</span>(<span class="st">&quot;skater&quot;</span>, <span class="dt">franchId=</span><span class="dv">14</span>)</a>
+<a class="sourceLine" id="cb5-3" title="3">s &lt;-<span class="st"> </span><span class="kw">getNHLData</span>(<span class="st">&quot;stats&quot;</span>, <span class="dt">teamId=</span><span class="dv">26</span>, <span class="dt">teamRoster=</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb5-4" title="4"><span class="co"># Stats API function returns a list with dataframes, so make it into a nice dataframe</span></a>
+<a class="sourceLine" id="cb5-5" title="5">s &lt;-<span class="st"> </span><span class="kw">cbind</span>(s[[<span class="dv">1</span>]]<span class="op">$</span>person, s[[<span class="dv">1</span>]]<span class="op">$</span>jerseyNumber, s[[<span class="dv">1</span>]]<span class="op">$</span>position)</a>
+<a class="sourceLine" id="cb5-6" title="6"></a>
+<a class="sourceLine" id="cb5-7" title="7"><span class="co"># Get active players only</span></a>
+<a class="sourceLine" id="cb5-8" title="8">fg.act &lt;-<span class="st"> </span>fg <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="dt">activePlayer=</span><span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>id, <span class="op">-</span>activePlayer, <span class="op">-</span>franchiseId, <span class="op">-</span>franchiseName,)</a>
+<a class="sourceLine" id="cb5-9" title="9">fk.act &lt;-<span class="st"> </span>fk <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="dt">activePlayer=</span><span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>activePlayer, <span class="op">-</span>franchiseId, <span class="op">-</span>franchiseName)</a>
+<a class="sourceLine" id="cb5-10" title="10">s.act &lt;-<span class="st"> </span>s <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(<span class="dt">activePlayer=</span><span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(<span class="op">-</span>link)</a>
+<a class="sourceLine" id="cb5-11" title="11"></a>
+<a class="sourceLine" id="cb5-12" title="12"><span class="co"># Join by playerId (called id in s.act) to get goalie and skater info about current team roster</span></a>
+<a class="sourceLine" id="cb5-13" title="13">roster.Info.g &lt;-<span class="st"> </span><span class="kw">left_join</span>(s.act <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(type<span class="op">==</span><span class="st">&quot;Goalie&quot;</span>), fg.act, <span class="dt">by=</span><span class="kw">c</span>(<span class="st">&quot;id&quot;</span>=<span class="st">&quot;playerId&quot;</span>))</a>
+<a class="sourceLine" id="cb5-14" title="14">roster.Info.fk &lt;-<span class="st"> </span><span class="kw">left_join</span>(s.act <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(type<span class="op">!=</span><span class="st">&quot;Goalie&quot;</span>), fk.act, <span class="dt">by=</span><span class="kw">c</span>(<span class="st">&quot;id&quot;</span>=<span class="st">&quot;playerId&quot;</span>))</a>
+<a class="sourceLine" id="cb5-15" title="15">roster.Info.g</a></code></pre></div>
+<pre><code>##        id        fullName s[[1]]$jerseyNumber code   name   type abbreviation firstName gameTypeId gamesPlayed
+## 1 8471734  Jonathan Quick                  32    G Goalie Goalie            G  Jonathan          2         644
+## 2 8477361 Calvin Petersen                  40    G Goalie Goalie            G      &lt;NA&gt;         NA          NA
+##   lastName losses mostGoalsAgainstDates mostGoalsAgainstOneGame mostSavesDates mostSavesOneGame
+## 1    Quick    240            2019-10-09                       8     2010-12-13               51
+## 2     &lt;NA&gt;     NA                  &lt;NA&gt;                      NA           &lt;NA&gt;               NA
+##   mostShotsAgainstDates mostShotsAgainstOneGame mostShutoutsOneSeason mostShutoutsSeasonIds mostWinsOneSeason
+## 1            2010-12-13                      51                    10              20112012                40
+## 2                  &lt;NA&gt;                      NA                    NA                  &lt;NA&gt;                NA
+##   mostWinsSeasonIds overtimeLosses positionCode rookieGamesPlayed rookieShutouts rookieWins seasons shutouts
+## 1          20152016             67            G                44              4         21      13       52
+## 2              &lt;NA&gt;             NA         &lt;NA&gt;                NA             NA         NA      NA       NA
+##   ties wins
+## 1    0  325
+## 2   NA   NA
+</code></pre>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">roster.Info.fk</a></code></pre></div>
+<pre><code>##         id           fullName s[[1]]$jerseyNumber code       name       type abbreviation  id.y assists
+## 1  8470604        Jeff Carter                  77    C     Center    Forward            C 30297     178
+## 2  8470606       Dustin Brown                  23    R Right Wing    Forward           RW 30301     354
+## 3  8471685       Anze Kopitar                  11    C     Center    Forward            C 30974     617
+## 4  8473453       Trevor Lewis                  22    C     Center    Forward            C 31227      93
+## 5  8474563       Drew Doughty                   8    D Defenseman Defenseman            D 31695     385
+## 6  8476924         Martin Frk                  29    R Right Wing    Forward           RW 33835       2
+## 7  8476947 Nikolai Prokhorkin                  74    L  Left Wing    Forward           LW 33769      10
+## 8  8477018         Ben Hutton                  15    D Defenseman Defenseman            D 33726      12
+## 9  8477046        Joakim Ryan                   6    D Defenseman Defenseman            D 33745       4
+## 10 8477073   Kurtis MacDermid                  56    D Defenseman Defenseman            D 32682       9
+## 11 8477960       Adrian Kempe                   9    C     Center    Forward            C 32885      62
+## 12 8478020     Michael Amadio                  10    C     Center    Forward            C 32903      21
+## 13 8478455      Austin Wagner                  51    L  Left Wing    Forward           LW 33361      14
+## 14 8478911           Matt Roy                   3    D Defenseman Defenseman            D 33532      18
+## 15 8479675       Trevor Moore                  12    C     Center    Forward            C 33864       2
+## 16 8479998     Mikey Anderson                  44    D Defenseman Defenseman            D 33930       0
+## 17 8480014    Gabriel Vilardi                  42    C     Center    Forward            C 33889       4
+## 18 8480113       Alex Iafallo                  19    L  Left Wing    Forward           LW 33073      60
+## 19 8480336        Sean Walker                  26    D Defenseman Defenseman            D 33403      26
+## 20 8481481      Blake Lizotte                  46    C     Center    Forward            C 33610      17
+##    firstName gameTypeId gamesPlayed goals   lastName
+## 1       Jeff          2         540   186     Carter
+## 2     Dustin          2        1183   299      Brown
+## 3       Anze          2        1073   333    Kopitar
+## 4     Trevor          2         674    70      Lewis
+## 5       Drew          2         919   117    Doughty
+## 6     Martin          2          17     6        Frk
+## 7    Nikolai          2          43     4 Prokhorkin
+## 8        Ben          2          65     4     Hutton
+## 9     Joakim          2          35     1       Ryan
+## 10    Kurtis          2          90     4  MacDermid
+## 11    Adrian          2         256    41      Kempe
+## 12   Michael          2         148    16     Amadio
+## 13    Austin          2         127    18     Wagner
+## 14      Matt          2          95     6        Roy
+## 15    Trevor          2          15     3      Moore
+## 16     Mikey          2           6     1   Anderson
+## 17   Gabriel          2          10     3    Vilardi
+## 18      Alex          2         227    41    Iafallo
+## 19      Sean          2         109     8     Walker
+## 20     Blake          2          66     6    Lizotte
+##                                                                                                                                                                                          mostAssistsGameDates
+## 1                                                                                                                                                  2014-10-26, 2014-12-18, 2015-02-12, 2016-03-17, 2017-04-08
+## 2                                                                                                                                                                                      2010-01-26, 2017-10-21
+## 3                                                                                                                                                                          2007-12-06, 2014-12-18, 2015-12-28
+## 4                                                              2010-11-20, 2011-03-29, 2012-03-17, 2013-02-19, 2013-03-16, 2015-03-03, 2015-12-29, 2016-11-23, 2017-10-18, 2017-11-30, 2017-12-30, 2018-02-07
+## 5                                                                                                                                                                                                  2010-01-04
+## 6                                                                                                                                                                                      2020-02-12, 2020-03-09
+## 7                                                                                                                                                                                                  2019-12-27
+## 8                                                                                                                                                                                                  2020-03-01
+## 9                                                                                                                                                              2019-10-12, 2019-12-06, 2020-02-15, 2020-02-18
+## 10                                                                                                                                                                                                 2017-11-30
+## 11                                                                                                                                                             2017-03-04, 2018-02-20, 2018-03-12, 2020-02-23
+## 12                                                                                                                                                                                                 2018-12-08
+## 13                                     2018-11-21, 2018-11-30, 2018-12-06, 2018-12-15, 2019-01-10, 2019-02-21, 2019-02-25, 2019-03-23, 2019-04-05, 2019-10-27, 2019-11-09, 2019-11-25, 2019-12-21, 2020-02-09
+## 14                                                                                                                                                                                                 2019-12-10
+## 15                                                                                                                                                                                     2020-02-26, 2020-03-01
+## 16                                                                                                                                     2020-02-29, 2020-03-01, 2020-03-05, 2020-03-07, 2020-03-09, 2020-03-11
+## 17                                                                                                                                                             2020-02-20, 2020-02-26, 2020-03-09, 2020-03-11
+## 18                                                                                                             2017-10-21, 2017-11-07, 2019-03-21, 2019-11-25, 2019-12-15, 2019-12-28, 2020-02-15, 2020-03-07
+## 19                                                                                                                                                                                     2019-12-14, 2020-01-06
+## 20 2019-10-08, 2019-10-19, 2019-10-24, 2019-11-02, 2019-11-09, 2019-11-25, 2019-11-27, 2019-12-10, 2019-12-14, 2019-12-21, 2019-12-31, 2020-02-06, 2020-02-09, 2020-02-12, 2020-02-20, 2020-02-26, 2020-02-29
+##    mostAssistsOneGame mostAssistsOneSeason mostAssistsSeasonIds
+## 1                   3                   38             20152016
+## 2                   3                   33             20172018
+## 3                   4                   57             20172018
+## 4                   2                   16             20142015
+## 5                   4                   50             20172018
+## 6                   1                    2             20192020
+## 7                   2                   10             20192020
+## 8                   2                   12             20192020
+## 9                   1                    4             20192020
+## 10                  2                    5             20192020
+## 11                  2                   21   20172018, 20192020
+## 12                  2                   10             20192020
+## 13                  1                    9             20182019
+## 14                  2                   14             20192020
+## 15                  1                    2             20192020
+## 16                  0                    0             20192020
+## 17                  1                    4             20192020
+## 18                  2                   26             20192020
+## 19                  2                   19             20192020
+## 20                  1                   17             20192020
+##                                                                                mostGoalsGameDates
+## 1                                                                          2013-03-04, 2018-03-29
+## 2                                                                                      2018-04-05
+## 3                                                                                      2018-03-22
+## 4                                                                                      2014-01-16
+## 5                                                                                      2011-02-02
+## 6                                                                                      2019-12-27
+## 7                                                  2019-11-16, 2019-11-23, 2019-11-30, 2019-12-02
+## 8                                                  2019-10-26, 2020-01-09, 2020-02-06, 2020-02-20
+## 9                                                                                      2019-11-30
+## 10                                                 2017-10-26, 2019-10-22, 2019-12-02, 2020-02-12
+## 11                                                                                     2017-10-18
+## 12                                                                                     2018-02-17
+## 13                                                                         2018-12-18, 2019-02-11
+## 14                         2019-03-21, 2019-04-06, 2019-11-02, 2019-11-27, 2019-12-07, 2019-12-17
+## 15                                                             2020-02-09, 2020-02-20, 2020-03-07
+## 16                                                                                     2020-03-09
+## 17                                                             2020-02-20, 2020-03-07, 2020-03-11
+## 18                                                                                     2020-01-30
+## 19 2018-12-31, 2019-03-02, 2019-03-18, 2019-10-08, 2019-10-09, 2019-10-27, 2019-11-12, 2020-02-12
+## 20                         2019-11-09, 2019-11-16, 2019-12-04, 2019-12-17, 2020-02-26, 2020-03-07
+##    mostGoalsOneGame mostGoalsOneSeason mostGoalsSeasonIds mostPenaltyMinutesOneSeason
+## 1                 3                 32           20162017                          44
+## 2                 4                 33           20072008                          80
+## 3                 4                 35           20172018                          32
+## 4                 2                 14           20172018                          30
+## 5                 2                 16           20092010                          69
+## 6                 2                  6           20192020                           4
+## 7                 1                  4           20192020                           6
+## 8                 1                  4           20192020                          14
+## 9                 1                  1           20192020                          10
+## 10                1                  3           20192020                          57
+## 11                3                 16           20172018                          50
+## 12                2                  6 20182019, 20192020                          10
+## 13                2                 12           20182019                          39
+## 14                1                  4           20192020                          10
+## 15                1                  3           20192020                           2
+## 16                1                  1           20192020                           0
+## 17                1                  3           20192020                           4
+## 18                3                 17           20192020                          22
+## 19                1                  5           20192020                          26
+## 20                1                  6           20192020                          20
+##    mostPenaltyMinutesSeasonIds                                                    mostPointsGameDates
+## 1                     20132014                         2014-10-26, 2014-12-18, 2015-10-22, 2017-02-09
+## 2                     20052006 2010-04-01, 2010-12-21, 2012-02-25, 2017-10-21, 2018-04-05, 2020-03-07
+## 3                     20082009                                                             2014-12-18
+## 4                     20162017                                                 2015-03-03, 2015-12-29
+## 5                     20112012                                                             2010-01-04
+## 6                     20192020                                                             2019-12-27
+## 7                     20192020                                                             2019-12-27
+## 8                     20192020                                                 2020-02-06, 2020-03-01
+## 9                     20192020             2019-10-12, 2019-11-30, 2019-12-06, 2020-02-15, 2020-02-18
+## 10                    20172018                                                 2017-11-30, 2020-02-12
+## 11                    20182019                                                             2017-10-18
+## 12                    20192020             2018-01-21, 2018-02-17, 2018-12-08, 2019-10-12, 2019-11-21
+## 13                    20192020                         2018-11-21, 2018-12-18, 2019-02-11, 2019-02-25
+## 14                    20192020                                                             2019-12-10
+## 15                    20192020             2020-02-09, 2020-02-20, 2020-02-26, 2020-03-01, 2020-03-07
+## 16                    20192020                                                             2020-03-09
+## 17                    20192020                                                 2020-02-20, 2020-03-11
+## 18                    20182019                                                             2020-01-30
+## 19                    20192020                                     2019-11-12, 2019-12-14, 2020-01-06
+## 20                    20192020                                                 2019-11-09, 2020-02-26
+##    mostPointsOneGame mostPointsOneSeason mostPointsSeasonIds penaltyMinutes points positionCode rookiePoints
+## 1                  4                  66            20162017            231    364            C           NA
+## 2                  4                  61            20172018            700    653            R            5
+## 3                  5                  92            20172018            294    950            C           61
+## 4                  3                  26            20172018            171    163            C           13
+## 5                  4                  60            20172018            635    502            D           27
+## 6                  2                   8            20192020              4      8            R           NA
+## 7                  2                  14            20192020              6     14            L           14
+## 8                  2                  16            20192020             14     16            D           NA
+## 9                  1                   5            20192020             10      5            D           NA
+## 10                 2                   8            20192020            115     13            D            4
+## 11                 4                  37            20172018            134    103            C           37
+## 12                 2                  16            20192020             24     37            C            8
+## 13                 2                  21            20182019             55     32            L           21
+## 14                 2                  18            20192020             18     24            D           18
+## 15                 1                   5            20192020              2      5            C            5
+## 16                 1                   1            20192020              0      1            D            1
+## 17                 2                   7            20192020              4      7            C            7
+## 18                 3                  43            20192020             48    101            L           25
+## 19                 2                  24            20192020             34     34            D           10
+## 20                 2                  23            20192020             20     23            C           23
+##    seasons
+## 1        9
+## 2       16
+## 3       14
+## 4       12
+## 5       12
+## 6        1
+## 7        1
+## 8        1
+## 9        1
+## 10       3
+## 11       4
+## 12       3
+## 13       2
+## 14       2
+## 15       1
+## 16       1
+## 17       1
+## 18       3
+## 19       2
+## 20       2
+</code></pre>
+<p>It appears there’s no information about LA Kings’ goalie Calvin Petersen. Some quick Googling shows he actually plays mostly in the AHL (American Hockey League) for the Ontario Reign team, which is the AHL affiliate of the LA Kings. This API is based on NHL data, and thus would miss out on Calvin Petersen’s info.<br />
+Otherwise, the skater info seems to have populated well, with no such missing player info.</p>
+<h3 id="create-new-variables">Create New Variables</h3>
+<p>I wonder if there is a correlation between the number of games played and the percentage of wins for goalies and skaters? It seems reasonable to think a team would play the best players most often.<br />
+I also wonder if having played as a rookie might influence a player’s win percentage, so let’s make a categorial variable for that.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1"><span class="co"># For goalies, let&#39;s calculate win percentage, and flag if someone is a rookie</span></a>
+<a class="sourceLine" id="cb9-2" title="2">fg.summStats &lt;-<span class="st"> </span>fg <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(firstName, lastName, wins, gamesPlayed, rookieGamesPlayed) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb9-3" title="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">winPct =</span> <span class="kw">round</span>(wins<span class="op">/</span>gamesPlayed, <span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb9-4" title="4"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rookieFlag=</span><span class="kw">factor</span>(<span class="kw">ifelse</span>(<span class="kw">is.na</span>(rookieGamesPlayed), <span class="dv">0</span>, <span class="dv">1</span>)))</a>
+<a class="sourceLine" id="cb9-5" title="5"></a>
+<a class="sourceLine" id="cb9-6" title="6"><span class="co"># For skaters, let&#39;s calculate goals per game</span></a>
+<a class="sourceLine" id="cb9-7" title="7">fk.summStats &lt;-<span class="st"> </span>fk <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(firstName, lastName, goals, gamesPlayed, rookiePoints) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb9-8" title="8"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">gpg =</span> <span class="kw">round</span>(goals<span class="op">/</span>gamesPlayed, <span class="dv">2</span>)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb9-9" title="9"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">rookieFlag=</span><span class="kw">factor</span>(<span class="kw">ifelse</span>(<span class="kw">is.na</span>(rookiePoints), <span class="dv">0</span>, <span class="dv">1</span>)))</a></code></pre></div>
+<h3 id="goalies-contingency-tables-numerical-summaries-graphical-summaries">Goalies: Contingency Tables, Numerical Summaries, Graphical Summaries</h3>
+<p>Let’s examine if starting as a rookie influenced win percent in goalies or goals per game in skaters.<br />
+About 16.3% of the LA Kings goalies once played as rookies.<br />
+Looking at the boxplot, we see that goalies who started as rookies tended to win more games. Perhaps a team only invests in a goalie as a rookie if they show unusual promise or high performance.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1"><span class="co"># 1-Way Table</span></a>
+<a class="sourceLine" id="cb10-2" title="2">(t1 &lt;-<span class="st"> </span><span class="kw">table</span>(fg.summStats<span class="op">$</span>rookieFlag))</a></code></pre></div>
+<pre><code>## 
+##  0  1 
+## 36  7
+</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">t1[<span class="dv">2</span>]<span class="op">/</span>(t1[<span class="dv">1</span>] <span class="op">+</span><span class="st"> </span>t1[<span class="dv">2</span>])</a></code></pre></div>
+<pre><code>##         1 
+## 0.1627907
+</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1"><span class="co"># Win Percent by Rookie Flag</span></a>
+<a class="sourceLine" id="cb14-2" title="2"><span class="co"># Built-in summary() table returns something ugly, so we write our own function</span></a>
+<a class="sourceLine" id="cb14-3" title="3">make_table &lt;-<span class="st"> </span><span class="cf">function</span>(x, cn){</a>
+<a class="sourceLine" id="cb14-4" title="4">  min &lt;-<span class="st"> </span><span class="kw">min</span>(x)</a>
+<a class="sourceLine" id="cb14-5" title="5">  q1 &lt;-<span class="st"> </span><span class="kw">quantile</span>(x, <span class="dt">probs=</span><span class="fl">0.25</span>)</a>
+<a class="sourceLine" id="cb14-6" title="6">  med &lt;-<span class="st"> </span><span class="kw">median</span>(x)</a>
+<a class="sourceLine" id="cb14-7" title="7">  mean &lt;-<span class="st"> </span><span class="kw">mean</span>(x)</a>
+<a class="sourceLine" id="cb14-8" title="8">  q3 &lt;-<span class="st"> </span><span class="kw">quantile</span>(x, <span class="dt">probs=</span><span class="fl">0.75</span>)</a>
+<a class="sourceLine" id="cb14-9" title="9">  max &lt;-<span class="st"> </span><span class="kw">max</span>(x)</a>
+<a class="sourceLine" id="cb14-10" title="10">  tab &lt;-<span class="st"> </span><span class="kw">round</span>(<span class="kw">rbind</span>(min, q1, med, mean, q3, max), <span class="dv">2</span>)</a>
+<a class="sourceLine" id="cb14-11" title="11">  <span class="kw">rownames</span>(tab) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Min.&quot;</span>, <span class="st">&quot;1st Q.&quot;</span>, <span class="st">&quot;Median&quot;</span>, <span class="st">&quot;Mean&quot;</span>, <span class="st">&quot;3rd Q.&quot;</span>, <span class="st">&quot;Max.&quot;</span>)</a>
+<a class="sourceLine" id="cb14-12" title="12">  <span class="kw">colnames</span>(tab) &lt;-<span class="st"> </span>cn</a>
+<a class="sourceLine" id="cb14-13" title="13">  <span class="kw">kable</span>(tab)</a>
+<a class="sourceLine" id="cb14-14" title="14">}</a>
+<a class="sourceLine" id="cb14-15" title="15"></a>
+<a class="sourceLine" id="cb14-16" title="16"><span class="co"># Let&#39;s look at the 5-number summaries for rookies vs. non-rookies</span></a>
+<a class="sourceLine" id="cb14-17" title="17">fg.winPct1 &lt;-<span class="st"> </span><span class="kw">unlist</span>(fg.summStats <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(rookieFlag<span class="op">==</span><span class="dv">1</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(winPct))</a>
+<a class="sourceLine" id="cb14-18" title="18"><span class="kw">make_table</span>(fg.winPct1, <span class="dt">cn=</span><span class="st">&quot;Started as Rookie&quot;</span>)</a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Started as Rookie</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Min.</td>
+<td align="right">0.25</td>
+</tr>
+<tr class="even">
+<td align="left">1st Q.</td>
+<td align="right">0.36</td>
+</tr>
+<tr class="odd">
+<td align="left">Median</td>
+<td align="right">0.41</td>
+</tr>
+<tr class="even">
+<td align="left">Mean</td>
+<td align="right">0.40</td>
+</tr>
+<tr class="odd">
+<td align="left">3rd Q.</td>
+<td align="right">0.44</td>
+</tr>
+<tr class="even">
+<td align="left">Max.</td>
+<td align="right">0.50</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" title="1">fg.winPct0 &lt;-<span class="st"> </span><span class="kw">unlist</span>(fg.summStats <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(rookieFlag<span class="op">==</span><span class="dv">0</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(winPct))</a>
+<a class="sourceLine" id="cb15-2" title="2"><span class="kw">make_table</span>(fg.winPct0, <span class="dt">cn=</span><span class="st">&quot;Didn&#39;t Start as Rookie&quot;</span>)</a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Didn’t Start as Rookie</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Min.</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">1st Q.</td>
+<td align="right">0.21</td>
+</tr>
+<tr class="odd">
+<td align="left">Median</td>
+<td align="right">0.28</td>
+</tr>
+<tr class="even">
+<td align="left">Mean</td>
+<td align="right">0.30</td>
+</tr>
+<tr class="odd">
+<td align="left">3rd Q.</td>
+<td align="right">0.41</td>
+</tr>
+<tr class="even">
+<td align="left">Max.</td>
+<td align="right">0.60</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1"><span class="co"># Compare using box plots side-by-side</span></a>
+<a class="sourceLine" id="cb16-2" title="2">g &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>fg.summStats, <span class="kw">aes</span>(<span class="dt">x=</span>rookieFlag, <span class="dt">y=</span>winPct)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb16-3" title="3"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;Goalie Win Percent Depending On If They Started as Rookies&quot;</span>, </a>
+<a class="sourceLine" id="cb16-4" title="4">       <span class="dt">x=</span><span class="st">&quot;Started as Rookie&quot;</span>, </a>
+<a class="sourceLine" id="cb16-5" title="5">       <span class="dt">y=</span><span class="st">&quot;Win Percent&quot;</span>)</a>
+<a class="sourceLine" id="cb16-6" title="6">g <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="dt">fill=</span><span class="st">&quot;grey&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">scale_x_discrete</span>(<span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;No&quot;</span>, <span class="st">&quot;Yes&quot;</span>))</a></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqAAAAHgCAMAAABNUi8GAAABPlBMVEUAAAAAADoAAGYAOjoAOmYAOpAAZpAAZrYzMzM6AAA6ADo6AGY6OgA6Ojo6OmY6ZmY6ZpA6ZrY6kLY6kNtNTU1NTW5NTY5NbqtNjshmAABmOgBmOjpmOmZmkJBmkLZmkNtmtpBmtrZmtttmtv9uTU1uTW5uTY5ubo5ubqtuq+SOTU2OTW6OTY6Obk2ObquOyP+QOgCQZgCQZjqQZmaQkDqQkGaQkLaQtpCQtraQttuQ27aQ29uQ2/+rbk2rbm6rjk2ryKur5OSr5P+2ZgC2Zjq2kDq2kGa2tpC2ttu229u22/+2/9u2//++vr7Ijk3IyI7I///bkDrbkGbbtmbbtpDb25Db27bb29vb2//b/7bb/9vb///kq27k///r6+v/tmb/yI7/25D/27b/29v/5Kv//7b//8j//9v//+T///+08M7DAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAWgElEQVR4nO2dC3sbx3mFF7qUgnNxXDKWoDRpYzqqKKkh617dSm4qOE2tOioRuW5dkoXgEAT3//+BznUvwICzuCxnD77zPo+EFbCX2e+8mJldAlSWE9JhstQNIOQmKCjpNBSUdBoKSjoNBSWdhoKSTkNBSaehoKTTrCXo7N2Psiz78VfLXj65f6b/zD097L3UD6PMvKJW+N/FddSrhnufr9qmyZ99Xd/Fj9+sugvVpr080PD6Ov/2wyy7+4vAOnbLL7NsT784HWSOO1/H9jm33/JUKoSe1O29GVeLpcWYDvaqje8g6wg6fexOez/8+hJBx9mhfhhmRlRVmlBRfEXtuiswujMn6Oq7aCLo9+7c7y0mbrYcq9dM5isKOjuxK+sVy1OpEHqyuaBZaJf5jgqqavmTr9TDN33bJQZWCJ6sLcZ08POBFnsc9sfl8C5btV4VQc3S7A/LmreceOD63JWa338WaJ8T9HDumbxR+uPsvt7vid58m4LarWZfLulMCkE7yxqCjjN3UpO+XtB9iu1P3qlBqvfn1R5Uv1aMLvapce+fTVlHtmNRf373Q7OVxecw1I9+cxXEKLvzJn/Xz+4Z6coX3NamA9qv72JsnvCrTgf746Wb68arF79yPejc871fFCKMioOohbm26y2Htc6qIuh3j92K/tjW5OnA78++m8y4Yk+lrKY6+V7fPlkW1LfX4dfOZ5+phU/my2mPU0bll4ygsxPfyRe7r+8lJWsIOqy9l8e6dGbUHvmBtRB0UrxmMNUa3T/Tj34dP7QdVtdxByk2n53c7asua+z3VnnBbR0StN6E6eDD/tLNXePvPfaC1p/PsmIg9Oc+HSy0/SZB7z12K1bao/c59sUZF12cO5VKNdXJm+33KwUt2uvOuVw7VM4/DvXuy6jG1Vaok3ozV6y5vaRkdUHro4I6lU/shY85T9OrlvLpN+E3fb/+pH9oRiXdeei3tHNBXVOMsqLSfojXu/Gbq5X29aFU6d6Znqvygt96fojPjeTlqmpOuHc2++38ft3m00Hvcz3A7s01qnx+/tzNzmttv2mI1zOCP9SObd/nw2Ls/zLrffiP/1OcQLWaxl37ZHk2tXaVa0/6H525oc3sqjIHrUbll0yPrZWt5zW3l5SsLejITundWdgr9P/+3d/0s1LQSd/0CqOy19k3kurHcdHT6lfL4H1F1f7Kze1K7t/5wgtm67Cg5aq6y5t/rtzcPle+u/zztmMropoXtNb2mwStH8c00b9NPd9+1nfDqjuBoprmnyMzpPity/Z63NqT/t2ff1W2wJWzp3zLy6jKJdUmG109r7m9pGRzQU0gYyOUGw29oONSNovqL8au36gO89XZfuUeUbm5XckdavEFs3VY0HJV3+zey9Dm1qtZOQd1z49ceksErbU9dpFkj1OUxPhfv46bffMz/YYY2bdjpZq5d9pvXbbXUqyd60mGuZAra/Gu/xNz96qIqlwy9xr2XRMrjavvJSWrC1rOw+y7rnKuH/79v383uEFQZefQ3UcZ7uVhQcsZ3KaC1puwFUHn56CbCKoVL0f46hb6BOrVzCOClmurIfpxVs6DbS3GWaV+c4L2PjHnNJ9XbS8pWesq/iO7YAUtxw191tU5aGGUZ9L/5WC/fIwIWm7uBd0Pv7BE0HG2X1nVDvHasNDmdt/Twbygc0P8wlX8qoJWSzLOflmM8G4CYmemdjSvVjPPK0/aEvj2VipSNPPbv/atcLUw10hLhnj7fCCvci8pWe8+qPkh0rc/q8231Xme6fsU/gLJTLo/1/f2CnVmJx9+8LJ8jAhabu5X0vOIQXW/VUHrNwv0fVB7WeFWVZ3MnxYXSQub657EXDPNNWruYiSv3QddQ9BqSWYnPypH+KHZ7+xdX/egZr5UrWZuz696Nr69hnLtsTrLfPZbv2NXzulg+UWSPra/HvC7n9tLSjb6SdK96h2L8mchRcZuzCgvBEaZf0fbxG4UtNzcZWT/fbjwghW0vM3kWmdUKVadDu723agV2tw8V95mqu7WTe7q537vTb6OoLWSjCpjqP/Bk7uFtF+vZu7Or9y6aK87ULm2W6iX09xqWHKbqZyuVApT20tK1vuwiJrMqwsZ+/Pyib/7a27+fj4sbsCf2dfuVu73+nv89jEmaLG5D1rfNP9k8QWztTJnz9bTOtVzU3y/qopCxWKfDGyuJ133/mNhDmqP+ReVO2uVn5mvI2i1JLX7OGa/ttHmVGrV9E9WtvbttRRr21vsH3mzyvm4uQlb3KifVG/U6/nKXF71vaREzKeZNvmhXvVu0BZZ8tNeUoWC3sik/ydqMjZsxaTvH3dhCO06FPRG2puM6UlnK/3yjkFBb6a1yZhS/6Pt73X3ECMowYSCkk5DQUmnoaCk01BQ0mkoKOk0qwv6fyDANPR2QSkLBRUKSlkoqFBQykJBhYJSFgoqFJSyUFChoJSFggoFpSwUVCgoZaGgQkEpCwUVCkpZKKhQUMpCQYWCUhYKKhSUslBQoaCUhYIKBaUsDQS9enbw8MIsXb86+OlrCroToJQlLuj1q+P8/JFZfHucv3euUlBwUMoSF/TqxWl++eTULXGI3xFQyhIX9PLpRX71/LVZ+hc3xD9QLN2gY8A0lNzEckH1oO4E/fTY6GpJ/dZqyoPUDegmKPnFBa32oH6JgsKDkl9c0Moc9NcUdGdAyS8u6PWro8pVPIf4HQElv7ig7j6o7kTV0sfFhXzqljeFggZBya+BoEtI3fKmUNAgKPlRUKGg5EdBhYKSHwUVCkp+FFQoKPlRUKGg5EdBhYKSHwUVCkp+FFQoKPlRUKGg5EdBhYKSHwUVCkp+FFQoKPlRUKGg5EdBhYKSHwUVCkp+FFQoKPlRUKGg5EdBhYKSHwUVCkp+FFQoKPlRUKGg5EdBhYKSHwUVCkp+FFQoKPlRUKGg5EdBhYKSHwUVCkp+FFQoKPlRUKGg5EdBhYKSHwUVCkp+FFQoKPlRUKGg5EdBhYKSHwUVCkp+FFQoKPlRUKGg5EdBhYKSHwUVCkp+FFQoKPlRUKGg5EdBhYKSHwUVCkp+FFQoKPlRUKGg5EdBhYKSHwUVCkp+FFQoKPlRUKGg5EdBhYKSHwUVCkp+FFQoKPlRUKGg5EdBhYKS3/qCovAgdQO6CVpZ2IMKA6UsFFQoKGWhoEJBKQsFFQpKWSioUFDKQkGFglIWCioUlLJQUKGglIWCCgWlLBRUKChloaBCQSkLBRUKSlkoqFBQykJBhYJSFgoqFJSyUFChoJSFggoFpSwUVCgoZaGgQkEpCwUVCkpZKKhQUMpCQYWCUhYKKhSUslBQoaCUhYIKBaUsFFQoKGWhoEJBKQsFFQpKWSioUFDKQkGFglIWCioUlLJQUKGglIWCCgWlLBRUKChloaBCQSkLBRUKSlkoaMd4sHNsVg8K2jEe/H7HoKARKGhaKGgECpoWChqBgqaFgkagoGmhoBEoaFooaAQKmhYKGoGCpoWCRqCgaaGgEShoWihoBAqaFgoagYKmhYJGoKBpoaARKGhaKGgECpoWChqBgqaFgkZAE3Tn2KweyQRNXbYW2LAiu1qXzeqRTtDUQ8/W2ZKgqU9j21DQrkBBg1DQrkBBg7Qv6NWzg4cXbvn61TEFXQIFDdK6oNrJ80fuH+cHFHQZFDRI64JevTjNL5+cmuXLv/wrCroMChqkdUEvn17kV89fm870i3+1Q7y+e7B0g2bsXBC/37QiO1qX7ZTlBkHfPywEPT/iHHQ57EGD3GIPqpYo6HIoaJBbnIOeH2iOKGgYChrkFq7ij8qrePagy6GgQW7rPqjtRCnocihoEP4kqStQ0CAUtCtQ0CAUtCtQ0CAUtCtQ0CAUtCtQ0CAUtCtQ0CAUtCtQ0CAUtCtQ0CAUtCtQ0CAUtCtQ0CAUtCtQ0CAUtCtQ0CAUtCtQ0CAUtCtQ0CAUtCtQ0CAtCDodHOqH8Z2vKegK8HczhdmsHhR0a2D9Gj2U1i4KOso8exziVwElcgtKa2/oQSNseGAKmhaU1oYEbcaGB6agaUFpbVDQSd8M8ZyDrgRK5BaU1oYEnZ3cPPukoEFQIregtDYkKOega4ESuQWlteEelIKuAUrkFpTWhgSN3QGloEFQIreg/C8tIUGng4wXSatDQdsg2IM2YsMDU9C0UNAIFDQt2IKOsuxwdP+Mgq4CBW2DoKDD+98NDmN3Qzc8MAVNC7Kg08GhvhXKTzOtBgVtAwq6NShoGwSH+JEe4qeDfQ7xq0BB2yAoaD7Wt0Fv9pOCzkNB2yAsaBM2PDAFTQsFjUBB0wIt6OxkP/6Zuw0PTEHTAi3ocC+Pfyp0wwNT0LQgC8pvda4FBW0DCro1KGgbhATNR1pN3gddEQraBkFBeR90HShoG4QFbcKGB6agaUEWlN9JWgsK2gYhQfmtzrWgoG0QEjSPfVaZgoagoG0Q7kH5pbk1oKBtEOxBG7HhgSloWihoBAqaFmxB+aW5NaCgbRAUlF+aWwcK2gYhQfmdpLWgoG1AQbcGBW2D4BDPL82tAwVtg6Cg/LDIOlDQNggLegvsoKC3XUJR8D7oxrAHbYOAoMPYDzkpaBAK2gaLgg7vn9mP1FPQ1aCgbbAgqPkwaJNPhG54YAqaFlhBzYdB9RfjKeiKUNA2oKBbg4K2AQXdGhS0DSjo1qCgbRAQtPjvuPmz+JWgoG2wIGhjNjwwBU0LBY3wYPfYSiC3BQWNkNqmFthKILcFBY3AIT4tFDQCBU0LBY1AQdMCLeikz9tMq0NB2yAkaPTX01PQEBS0DUKC8peHrQUFbYNwD0pB14CCtkFI0NgXjiloEAraBiFB+dvt1oKCtkGwB23EhgemoGmhoBEoaFpgBTW/94ZD/BpQ0DYICNrkComCLkJB22BBUP21+EZfjN/wwBQ0LbiCaszPOiOSbnhgCpoWbEENkd/esOGBKWhSYD6+ukTQ2Ql/u92qgCRuwPmAdVBQNQ2N/09JGx6YgqYEWdBRlvVexuykoItgBG4BFrTZR5ko6CIYgTtQ/Az0oGr62ehO6IYHpqBpgb6Kn/Sz+EeWNzwwBU0LtKC5nonGJqIbHpiCpgVdUD3U8z7oSlDQNggLyp8krQEFbYMFQfUtev4sfh0oaBssCMpPM60LBW2DBUEbs+GBKWhaKGgECpoWChqBgqaFgkagoGmhoBEoaFooaAQKmhYKGoGCpoWCRqCgaaGgEShoWihoBAqaFgoagYKmhYJGoKBpoaARKGhaKGgECpoWChqBgqaFgkagoGmhoBES/X+abbKVQG4LCtoVsLy5NVDyayDo1bODhxdm6fLTg4NjCroToOQXF/T61XF+/siY+vx1fvmr1xR0F0DJLy7o1YvT/PLJqVp6rzV967vQ1C1vCgUNgpJfXNDLpxem73S6miV9SbB0g44B01ByE8sFff+wIuj1qyP/fOq3VlPYgwZByS8uaLUHvXpW+IlyghQ0DEp+cUHLOai6ij8un0/d8qZQ0CAo+cUF1aO6vYqv+YlyghQ0DEp+cUHdfVDViZ4faHgVvxOg5NdA0CWkbnlTKGgQlPwoqFBQ8qOgQkHJj4IKBSU/CioUlPwoqFBQ8qOgQkHJj4IKBSU/CioUlPwoqFBQ8qOgQkHJj4IKBSU/CioUlPwoqFBQ8qOgQkHJj4IKBSU/CioUlPwoqFBQ8qOgQkHJj4IKBSU/CioUlPwoqFBQ8qOgQkHJj4IKBSU/CioUlPwoqFBQ8qOgQkHJj4IKBSU/CioUlPwoqFBQ8qOgQkHJj4IKBSU/CioUlPwoqFBQ8qOgQkHJj4IKBSU/CioUlPwoqFBQ8qOgQkHJj4IKBSU/CioUlPwoqFBQ8qOgQkHJj4IKBSU/CioUlPwoqFBQ8qOgQkHJj4IKBSU/CioUlPwoqFBQ8qOgQkHJj4IKBSU/CioUlPwoqFBQ8qOgQkHJb31BUXiQugFkG7AHFQZKfhRUKCj5UVChoORHQYWCkh8FFQpKfhRUKCj5UVChoORHQYWCkh8FFQpKfhRUKCj5UVChoORHQYWCkh8FFQpKfhRUKCj5UVChoORHQYWCkh8FFQpKfhRUKCj5UVChoORHQYWCkh8FFQpKfhRUKCj5UVChoORHQYWCkh8FFQpKfhRUKCj5UVChoORHQYWCkh8FFQpKfhRUKCj5UVChoORHQYWCkh8FFQpKfhRUKCj5UVChoORHQYWCkh8FFQpKfhRUKCj5UVChoORHQYWCkh8FFQpKfhRUKCj5UVChoORHQYWCkh8FFQpKfhRUKCj5UVChoORHQYWCkh8FFQpKfhRUKCj5UVChoORHQYWCkh8FFQpKfhRUKCj5UVChoORHQYWCkh8FFQpKfg0EvXp28PBibomCooOSX1zQ61fH+fmj+hIFhQclv7igVy9O88snp7UlCgoPSn5xQS+fXuRXz1/Xlh4olm5AyPZZLuj7h17LckmT+q3VFJiG3i4oZYkLGupBKSg8KGWJC4o+B4Vp6O2CUpa4oNevjoqr+CPAq3iYht4uKGWJC+rufuquE/I+KExDbxeUsjQQdAmpW94UmIbeLihloaBCQSkLBRUKSlkoqFBQykJBhYJSFgoqFJSyUFChoJSFggoFpSwUVCgoZaGgQkEpCwUVCkpZKKhQUMqyvqAo8KP/QdDKQkGFgVYWCioMtLJQUGGglWV3BSU7AQUlnYaCkk5DQUmnoaCk0+yeoJefHuu/i+/xk/z6lf7S+NtH0RU7yC4K+vEpBa1z+avXqBXZQUGf/Oej3H+d/2PIULaP6j3fHuW+Iu8PcAqzi4Kevj02gqpI3pe/cEI0V89/81RV4q35FTH6Vxmdo4z3Oyno1a8v9N8qh/J3ngnn/OA4N9VQVYEqyk4Kmp8fqb/1wvUXQFm0iZmBqhH+4OCnajr6qf4bg90U9PqL37AHrWEFfVHMPGHmPrspqL2U5xy0xF7D24roosAUZkcFzc8/5lV8FfebXp+Zsf0tr+IJ2Q4UlHQaCko6DQUlnYaCkk5DQUmnoaCrMMqyrPdSLXz/Zu6V+SfGd75etpPZSWbYX3xp8sHLygPJKehKjLR14+xw0aCFJ24U1Kg56R8uvEQzF6CgzZmdGKWG98+2IWg+3Ft4iYIuQEGb481SnZ8eoPXf+uEHf+tGbD12ay+ng6z3d05Qt5J9PKztRguqN9nLi0ct6Djb0w9+Z9KhoCsw9hNHbdB0cGgG/UnfmTU7UQuj+2fTwb560cpVrKS7RjeoO0H1VEFvUv2jVtMrqQe/s2Tn2hUo6EroqyTn4x+1PM4o2/XZ3vPQPI6soMVKPyg7Q3+RdOgmAuov/zj54B/6+2YDv7NE59kdKOiqTAd+Djo21/S2c1R/jdzFuen3CiPtSvnQDuUa04NOtIj52KyqdHSPeiJgdR8tvdIXBgVdGS2SGeKVd27ZCuoG5KqgfiWz6OaUdogfmx50QdBDdQlmBOXobqGgzSnvUpoRXSs0rvSg4569BPfjtVl2K5kX3Ijt5qBDtYZ5RQ/x7lHtRs9gtbI9Xs8bKOgKDLU1+vJFq6YVmvSdoPqJ2YmyUT07HewVF0l+JeOrE7y4D7oXukjKR2aXfmcpT7cTUNBVGPl54VDNKNW0svdPg0OrnX5CX/30XtZvM7mV/FRU428zjdydqbnbTErN/3K3megnBSUdh4KSTkNBSaehoKTTUFDSaSgo6TQUlHQaCko6DQUlnYaCkk7z/9emOWNqVP1LAAAAAElFTkSuQmCC" /><!-- --></p>
+<h3 id="skaters-contingency-tables-numerical-summaries-graphical-summaries">Skaters: Contingency Tables, Numerical Summaries, Graphical Summaries</h3>
+<p>About 44.0% of the LA Kings skaters once played as rookies. Quite different from the goalies! Perhaps due to this greater likelihood of accepting skaters as rookies, there’s not much difference in their goals per game (see boxplot).</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" title="1"><span class="co"># 1-Way Table</span></a>
+<a class="sourceLine" id="cb17-2" title="2">(t3 &lt;-<span class="st"> </span><span class="kw">table</span>(fk.summStats<span class="op">$</span>rookieFlag))</a></code></pre></div>
+<pre><code>## 
+##   0   1 
+## 334 262
+</code></pre>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" title="1">t3[<span class="dv">2</span>]<span class="op">/</span>(t3[<span class="dv">1</span>] <span class="op">+</span><span class="st"> </span>t3[<span class="dv">2</span>])</a></code></pre></div>
+<pre><code>##         1 
+## 0.4395973
+</code></pre>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" title="1"><span class="co"># Goals Per Game by Rookie Flag</span></a>
+<a class="sourceLine" id="cb21-2" title="2"><span class="co"># Let&#39;s look at the 5-number summaries for rookies vs. non-rookies</span></a>
+<a class="sourceLine" id="cb21-3" title="3">fk.gpg1 &lt;-<span class="st"> </span><span class="kw">unlist</span>(fk.summStats <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(rookieFlag<span class="op">==</span><span class="dv">1</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(gpg))</a>
+<a class="sourceLine" id="cb21-4" title="4"><span class="kw">make_table</span>(fk.gpg1, <span class="dt">cn=</span><span class="st">&quot;Started as Rookie&quot;</span>)</a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Started as Rookie</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Min.</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">1st Q.</td>
+<td align="right">0.01</td>
+</tr>
+<tr class="odd">
+<td align="left">Median</td>
+<td align="right">0.09</td>
+</tr>
+<tr class="even">
+<td align="left">Mean</td>
+<td align="right">0.11</td>
+</tr>
+<tr class="odd">
+<td align="left">3rd Q.</td>
+<td align="right">0.17</td>
+</tr>
+<tr class="even">
+<td align="left">Max.</td>
+<td align="right">0.54</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1">fk.gpg0 &lt;-<span class="st"> </span><span class="kw">unlist</span>(fk.summStats <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(rookieFlag<span class="op">==</span><span class="dv">0</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(gpg))</a>
+<a class="sourceLine" id="cb22-2" title="2"><span class="kw">make_table</span>(fk.gpg0, <span class="dt">cn=</span><span class="st">&quot;Didn&#39;t Start as Rookie&quot;</span>)</a></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Didn’t Start as Rookie</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Min.</td>
+<td align="right">0.00</td>
+</tr>
+<tr class="even">
+<td align="left">1st Q.</td>
+<td align="right">0.04</td>
+</tr>
+<tr class="odd">
+<td align="left">Median</td>
+<td align="right">0.10</td>
+</tr>
+<tr class="even">
+<td align="left">Mean</td>
+<td align="right">0.12</td>
+</tr>
+<tr class="odd">
+<td align="left">3rd Q.</td>
+<td align="right">0.19</td>
+</tr>
+<tr class="even">
+<td align="left">Max.</td>
+<td align="right">0.60</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" title="1"><span class="co"># Compare using box plots side-by-side</span></a>
+<a class="sourceLine" id="cb23-2" title="2">g2 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>fk.summStats, <span class="kw">aes</span>(<span class="dt">x=</span>rookieFlag, <span class="dt">y=</span>gpg)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb23-3" title="3"><span class="st">   </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;Skater Goals Per Game Depending On If They Started as Rookies&quot;</span>, </a>
+<a class="sourceLine" id="cb23-4" title="4">        <span class="dt">x=</span><span class="st">&quot;Started as Rookie&quot;</span>, </a>
+<a class="sourceLine" id="cb23-5" title="5">        <span class="dt">y=</span><span class="st">&quot;Games Per Goal&quot;</span>)</a>
+<a class="sourceLine" id="cb23-6" title="6">g2 <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="dt">fill=</span><span class="st">&quot;grey&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">scale_x_discrete</span>(<span class="dt">labels=</span><span class="kw">c</span>(<span class="st">&quot;No&quot;</span>, <span class="st">&quot;Yes&quot;</span>))</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<h3 id="franchises--teams-more-plots">Franchises &amp; Teams: More Plots</h3>
+<p>Let’s take a break from the LA Kings and look at all teams as a group.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1"><span class="co"># Get data for last season of games (splits: stat and rankings)</span></a>
+<a class="sourceLine" id="cb24-2" title="2">ts &lt;-<span class="st"> </span><span class="kw">getNHLData</span>(<span class="st">&quot;stats&quot;</span>, <span class="dt">teamStats=</span><span class="ot">TRUE</span>, <span class="dt">season=</span><span class="st">&quot;20192020&quot;</span>)</a>
+<a class="sourceLine" id="cb24-3" title="3"><span class="kw">attributes</span>(ts)</a></code></pre></div>
+<pre><code>## $names
+##  [1] &quot;id&quot;              &quot;name&quot;            &quot;link&quot;            &quot;venue&quot;           &quot;abbreviation&quot;   
+##  [6] &quot;teamName&quot;        &quot;locationName&quot;    &quot;firstYearOfPlay&quot; &quot;division&quot;        &quot;conference&quot;     
+## [11] &quot;franchise&quot;       &quot;teamStats&quot;       &quot;shortName&quot;       &quot;officialSiteUrl&quot; &quot;franchiseId&quot;    
+## [16] &quot;active&quot;         
+## 
+## $class
+## [1] &quot;data.frame&quot;
+## 
+## $row.names
+##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31
+</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1"><span class="co"># Pull out teamId and teamName.</span></a>
+<a class="sourceLine" id="cb26-2" title="2">n =<span class="st"> </span><span class="kw">nrow</span>(ts)</a>
+<a class="sourceLine" id="cb26-3" title="3"><span class="co"># For each of the 31 teams that are currently active, pull out info about the division and splits (df)</span></a>
+<a class="sourceLine" id="cb26-4" title="4"><span class="co"># You&#39;ll need to query for each team individually</span></a>
+<a class="sourceLine" id="cb26-5" title="5">id =<span class="st"> </span><span class="kw">as.vector</span>(ts<span class="op">$</span>id)</a>
+<a class="sourceLine" id="cb26-6" title="6">name =<span class="st"> </span><span class="kw">as.vector</span>(ts<span class="op">$</span>name)</a>
+<a class="sourceLine" id="cb26-7" title="7">div =<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, n)</a>
+<a class="sourceLine" id="cb26-8" title="8">conf =<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, n)</a>
+<a class="sourceLine" id="cb26-9" title="9">gamesPlayed =<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, n)</a>
+<a class="sourceLine" id="cb26-10" title="10">wins =<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, n)</a>
+<a class="sourceLine" id="cb26-11" title="11">losses =<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, n)</a>
+<a class="sourceLine" id="cb26-12" title="12">pts =<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, n)</a>
+<a class="sourceLine" id="cb26-13" title="13">goalsPerGame =<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, n)</a>
+<a class="sourceLine" id="cb26-14" title="14">goalsAgainstPerGame =<span class="st"> </span><span class="kw">rep</span>(<span class="ot">NA</span>, n)</a>
+<a class="sourceLine" id="cb26-15" title="15"><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n) {</a>
+<a class="sourceLine" id="cb26-16" title="16">  team &lt;-<span class="st"> </span><span class="kw">getNHLData</span>(<span class="st">&quot;stats&quot;</span>, <span class="dt">teamStats=</span><span class="ot">TRUE</span>, <span class="dt">teamId=</span>id[i])</a>
+<a class="sourceLine" id="cb26-17" title="17">  div[i]                 &lt;-<span class="st"> </span>team<span class="op">$</span>division<span class="op">$</span>name</a>
+<a class="sourceLine" id="cb26-18" title="18">  conf[i]                &lt;-<span class="st"> </span>team<span class="op">$</span>conference<span class="op">$</span>name</a>
+<a class="sourceLine" id="cb26-19" title="19">  gamesPlayed[i]         &lt;-<span class="st"> </span>team<span class="op">$</span>teamStats[[<span class="dv">1</span>]]<span class="op">$</span>splits[[<span class="dv">1</span>]]<span class="op">$</span>stat<span class="op">$</span>gamesPlayed[<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb26-20" title="20">  wins[i]                &lt;-<span class="st"> </span>team<span class="op">$</span>teamStats[[<span class="dv">1</span>]]<span class="op">$</span>splits[[<span class="dv">1</span>]]<span class="op">$</span>stat<span class="op">$</span>wins[<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb26-21" title="21">  losses[i]              &lt;-<span class="st"> </span>team<span class="op">$</span>teamStats[[<span class="dv">1</span>]]<span class="op">$</span>splits[[<span class="dv">1</span>]]<span class="op">$</span>stat<span class="op">$</span>losses[<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb26-22" title="22">  pts[i]                 &lt;-<span class="st"> </span>team<span class="op">$</span>teamStats[[<span class="dv">1</span>]]<span class="op">$</span>splits[[<span class="dv">1</span>]]<span class="op">$</span>stat<span class="op">$</span>pts[<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb26-23" title="23">  goalsPerGame[i]        &lt;-<span class="st"> </span>team<span class="op">$</span>teamStats[[<span class="dv">1</span>]]<span class="op">$</span>splits[[<span class="dv">1</span>]]<span class="op">$</span>stat<span class="op">$</span>goalsPerGame[<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb26-24" title="24">  goalsAgainstPerGame[i] &lt;-<span class="st"> </span>team<span class="op">$</span>teamStats[[<span class="dv">1</span>]]<span class="op">$</span>splits[[<span class="dv">1</span>]]<span class="op">$</span>stat<span class="op">$</span>goalsAgainstPerGame[<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb26-25" title="25">}</a>
+<a class="sourceLine" id="cb26-26" title="26"></a>
+<a class="sourceLine" id="cb26-27" title="27"><span class="co"># Put it all together in a new dataframe</span></a>
+<a class="sourceLine" id="cb26-28" title="28">teams.df &lt;-<span class="st"> </span><span class="kw">cbind</span>(id, gamesPlayed, <span class="kw">as.numeric</span>(wins), <span class="kw">as.numeric</span>(losses), <span class="kw">as.numeric</span>(pts),</a>
+<a class="sourceLine" id="cb26-29" title="29">                  <span class="kw">as.numeric</span>(goalsPerGame), <span class="kw">as.numeric</span>(goalsAgainstPerGame))</a>
+<a class="sourceLine" id="cb26-30" title="30">teams.df &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(teams.df)</a>
+<a class="sourceLine" id="cb26-31" title="31"><span class="kw">colnames</span>(teams.df) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;id&quot;</span>, <span class="st">&quot;gamesPlayed&quot;</span>, <span class="st">&quot;wins&quot;</span>, <span class="st">&quot;losses&quot;</span>, <span class="st">&quot;pts&quot;</span>, <span class="st">&quot;goalsPerGame&quot;</span>,</a>
+<a class="sourceLine" id="cb26-32" title="32">                        <span class="st">&quot;goalsAgainstPerGame&quot;</span>)</a>
+<a class="sourceLine" id="cb26-33" title="33">teams.df &lt;-<span class="st"> </span><span class="kw">cbind</span>(teams.df, name, div, conf)</a></code></pre></div>
+<p>How many teams are in each division? Pretty evenly split, as we expected.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" title="1">g3 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>teams.df, <span class="kw">aes</span>(<span class="dt">x=</span>div)) <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">x=</span><span class="st">&quot;Division&quot;</span>)</a>
+<a class="sourceLine" id="cb27-2" title="2">g3 <span class="op">+</span><span class="st"> </span><span class="kw">geom_bar</span>()</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>Let’s plot goals scored vs goals allowed to see where offense and defense intersect. Teams in the bottom right corner perform the best, scoring more goals per game while keeping goals allowed (by opponents) per game low. There’s no obvious patterns by division, but we can look at the outliers a bit more (both are Atlantic teams)</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1">g4 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(teams.df, <span class="kw">aes</span>(<span class="dt">x=</span>goalsPerGame, <span class="dt">y=</span>goalsAgainstPerGame)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb28-2" title="2"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;Goals Allowed vs. Goals Scored&quot;</span>, <span class="dt">x=</span><span class="st">&quot;Goals Scored Per Game&quot;</span>, <span class="dt">y=</span><span class="st">&quot;Goals Allowed Per Game&quot;</span>)</a>
+<a class="sourceLine" id="cb28-3" title="3">g4 <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color=</span><span class="kw">factor</span>(div))) <span class="op">+</span></a>
+<a class="sourceLine" id="cb28-4" title="4"><span class="st">  </span><span class="kw">scale_color_manual</span>(<span class="dt">name=</span><span class="st">&quot;Division&quot;</span>, <span class="dt">values=</span><span class="kw">c</span>(<span class="st">&quot;green&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;red&quot;</span>, <span class="st">&quot;blue&quot;</span>))</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>Looks like the Detroit Red Wings performed unusually poor (allowing more goals per game while scoring few goals per game) and the Boston Bruins performed unusually well (scoring more goals per game while allowing fewer goals per game).</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" title="1">atlanticTeams.df &lt;-<span class="st"> </span>teams.df <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(div<span class="op">==</span><span class="st">&quot;Atlantic&quot;</span>)</a>
+<a class="sourceLine" id="cb29-2" title="2">g5 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(atlanticTeams.df, <span class="kw">aes</span>(<span class="dt">x=</span>goalsPerGame, <span class="dt">y=</span>goalsAgainstPerGame)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb29-3" title="3"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;Goals Allowed vs. Goals Scored&quot;</span>, <span class="dt">x=</span><span class="st">&quot;Goals Scored Per Game&quot;</span>, <span class="dt">y=</span><span class="st">&quot;Goals Allowed Per Game&quot;</span>)</a>
+<a class="sourceLine" id="cb29-4" title="4">g5 <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_text</span>(<span class="kw">aes</span>(<span class="dt">label=</span>name))</a></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqAAAAHgCAMAAABNUi8GAAACZ1BMVEUAAAAAABUAAB8AACYAADUAADoAAF4AAGYAFQAAFV8ALUoANTUANXEANYQAOjoAOmYAOpAAQ0QAUV4AXl4AXqgAZrYNAAANAA0NAC0VAAAVADUdAAAdADUdAF4mAAAmADUmeOstAAAzMzM1AAA1ABU1ADU1AF41NTU1NXE1NYQ1UV41Xl41X1E1cXI1hMk1kKg1kMk1kOs6AAA6ADo6AGY6OgA6Ojo6OmY6ZmY6ZpA6ZrY6kLY6kNtKretNTU1NTW5NTY5NbqtNjsheAABeADVeAF5eJjVeNQBeNYReUTVeXl5eeF5ehIRekIReqKheqMleqOtfFQBfUQBmAABmOgBmOjpmZmZmkJBmkLZmkNtmtrZmtttmtv9uTU1uTW5uTY5ubo5ubqtuq+RyJgByNQByyeuELQCENQCENTWENVGENV6EXgCEXyaEcR2EhDWEhF6EkV6EqISErYSEyaiEyeuOTU2OTW6OTY6Obk2ObquOyP+QOgCQZgCQZjqQZmaQkDqQkGaQkLaQtpCQtraQttuQ27aQ2/+R6+uoXgCoXjWoqF6oyYSoyeuo68mo6+urbk2rbm6rbo6rjk2r5OSr5P+thDW2ZgC2Zjq2Zma2kDq2kGa2tpC2ttu225C229u22/+2/7a2/9u2///Ijk3I///JcR3JhDXJqF7J66jJ68nJ6+vbkDrbtmbbtpDb27bb29vb2//b/7bb///kq27k///rkTXrqF7rrUrryV7ryYTryajrycnr63jr65Hr66jr68nr6+v/tmb/trb/yI7/25D/27b/29v/5Kv//7b//8j//9v//+T////H6R3LAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAgAElEQVR4nO2di38j11XHh43t5eVkAblQaKFE2KVQDFXapgnGeXgLJUAjcMurm4YEisur2yRKAmsKAZLFNMFbYBGUR0OTRbRWUujuoqAUbIlVsdc7fxT3nHvvPKQ70kg7Gh2tfueztkbz+M619N37mrl3PB+BEBzepBOAQPQLCIoQHRAUITogKEJ0QFCE6ICgCNEBQRGiA4IiRMdIgh6/9n7P8+7+QtLm7VOXe9e2vTN2o3uHBNbSuJJ0/A/v87zbfzltSoZJDSKzGEXQo494Otbc293+Vb0luzF7QUdI0vG2PiJ1UtKnBpFdjCCo+mbvUTnV8eul+fMJOzi+9E7p/bz7WAQdJUlt79TLvv/1bZ2xZ5kaRIYxgqBtz3xLnRItfF1lXne8TO9fU0Xm/K8YG44/o958LDyqfvKfS5S9hYKaA/WbOuV9/P3T6rs1r+Td8QWrRP3kK+r30eZSD3nEJNW1y0TUp+K39lCVlLp38uWk1CDyihEErbIqNtolKifpy67rIvOMcdC8MaE80CYGggYHsilcAegohTtx3h0fCdQjlqrIdpNHTVI7Uh1o2wOCQ4+3by+p0j8pNYi8YnhBdZZjQ33rH6Nvj75/leFwFkY2dEr3Xjb5GQc1kbiZZAUNDyT1jjY95Vh7/vzxNuVxr6sDjzbnn6cSeMmeiPRWJnaTR07S33nzH/iz/9BHKAVfU8JGD9VZekJqEHnFyILWdQPDfOFVLi///R//qORZG27/pWiTmvI4PtIKGh5Iqzt3PacIVVrN+VqdRKSlUCjKaHnXLvLISfK/8pmSLvPNSYOzVek/CmXKyalB5BQ3LygXmSrvM4WzsUGV2SruedkcZLapLz0UNDhQedk++S+bZ44213Rhy6Wq7pYKmyWkCK+Lk0dOEsfx6x/11kz1wbf1CJ2TU4adnBpETjG8oDpv0UtRG1Qp/YE/+aevbhob/Nc/oo3kqAe9QA5B1U9V1VCXaFWyEnSQrmvGyCMnye85AoIKjJFa8ffqhXhJrb9cW+HjHb7yh6ZJYtYcbdr6Z6wg7pR+dXvNr5/6vHIncMUUr5HqZX3+heBNQB45SZQWXqja8tuPF/G0uU9qEPnEaP2gfMXmKx/14m2dpcvUK6P9a3s/ftk//rzplrQtZvPNxxtJ1GK+i/LR93EVVTVGVGvk5CuqWfIxOlegRKf0iyRXnDxyklSBT6X98Wsl2kr/TTajh9ouh8TUIPKJm7qSdEe8Y8ZemYn06dhcKhB1qbebiYzgvNPTHUn2ilC7q2NHIal4DsntSC/W0EmijgMv6F2yHVCRQ3m/5NQg8onRbhZRTQvPu/t5Xu7YXnHu435elZhhr/i9Woag8asqi18MOuqDA3U/u61I0urbuTtdVRnv+GKk1lc3F0stuR0t5odMkm+uxc/fY3vhdRd+J+io1yInpwaRS+BuJoTogKAI0QFBEaIDgiJEBwRFiA4IihAdEBQhOiAoQnRAUITogKAI0TG8oK0+0XfjzQfws4OHoMCLxkNQ4EXjISjwovEQFHjReAgKvGg8BAVeNB6CAi8aD0GBF42HoMCLxkNQ4EXjISjwovEQFHjReAgKvGj8zQnaXK603nyJQQdbevKN1a7TNBZ26WVncU/9rnkF3rVAB2b4V2QbwAvC33QOalU72GI1m8VyyyUovxxsPUSe7m+sZvxXZBvAC8JnLWhrR+WRKiMNTmAEZXH3Tz91Wu3dmLuZ7NP1V2QbwAvCjy4oldbN5SeKplSPCMpFPXm5v+HNndWC8ubG4pfppba4p7TWx5b1Xk+s7CqHPX4/wl+RbQAvCD+6oKom2WLPYjloQynGgioLqSjf39CCkpWtndVWTWmtXujAolpTW9i1ezFI1xCG/iuyDeAF4UcXlArvmKC6kVRuaUH3N8pcuteMoOrNwVa51VxRRpa1oGWuINi91JaR/4psA3hB+JsQVNsZy0GbRcpGa6Y9T5lmy3q3f7pCi8pOerEHql/BXjset/FH+SuyDeAF4bMVlEt4VZpf5lUxQVXBTsW7eXEJyrXRhTTZ6C32HQDfB38TgnYX8VwH3VGGNebO8youvBtWuVphZzV4iQga24uK/xH+imwDeEH40QU1jSSrVNAPWlCLp/aoL2l/oxA2klrNd7LK+iUiqG0ksaPpOvBvse8A+D740QXV3UwVVXXkmqPtZqp5q62Dbc+jvs5INxO94YtJB1tcpIeCBns1PH3UCH9FtgG8IPzogg51mkHRYHlH/iuyDeAF4ScvKF1XourCzfwV2QbwgvCTF5R7pYby81b7DoDvgxcg6PAB/OzgISjwovEQFHjReAgKvGg8BAVeNB6CAi8aD0GBF42HoMCLxkNQ4EXjISjwovEQFHjReAgKvGg8BAVeNB6CAi8aD0GBF42HoMCLxkNQ4EXjISjwovEQFHjReAgKvGg8BAVeNB6CAi8aD0GBF42HoMCLxkNQ4EXjISjwovGjC4pA5BjIQYEXiYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReNTCHptff3+S2b5xoVzEBT4HPGDBT189JJ/5UHz5so6BAU+T3yKHNRIyq+/9vsQFPg88ekENTnojc/9jS7i71TR9wAEItvoJ+jhI/dd5IUrj6MOCny++DSC+v71Z8jQw8euQlDg88WnE9R/lby8sk7xOAQFPj/8YEGvPXDV5KA+upmAlycoZZyqDqob8hAU+HzxKYt4Rwx1mmwD+NnBQ1DgReMhKPCi8RB0IL7hqSjT0psv6Z9BUVMHzFX64NNARo1b6rOHoIPxOwu7rdb+xuJeq7lc4Z9BUaMjGtppJz4NZOS4lT77VpKgdc87Uz91GYIq25SZKg62VtMKerBVVjloa0cf6MJD0PR4p6DVU1/dPHO8vQRByTa90Fh4seh5P6x+lKnqt7dKzuqMcqdgVplDqE7g2UWVnTaXnyhyLYH3WmsyhLYV1KqVT6ldeENSljt66scQEgQ92jyj/vntk69A0CCzUws2B93fKHM5TpnrzjtJtbJdxbs2rKAHWwXOgptFtafaqvc6uUsQ2kY/zWLBnKVZzMTQW+ez1ysgaF98IKiSywr6tT29obmye/DJs8q/lV27Su/LghYo193VB5J6aqve6y42nbc1KO+kbSu7Y0n9GEKCoH6divijzTUU8RFBT1fCOmiDm+kq52y+60sf5JzUrDJHqWVqVtXYVG9VZ5D0i/aa14LSQSZbVpUEFjrz1I8hRAjqt+lz7e/njAgaqYPuhkX8nF7YKTQKB1sPq7posCoM9c40sFpWUL3XXQ5BKaP1FjLJRm+dz16vcAqaJoY6TbaRayteaxNtxbNbjTla+J1yq/YdpyOrWkGmq17MikBQvZfJQWmbsV4H11AzTn32AUFTxIT6Qckg+iG3msU5k5U2PLUpWMVH0KtuBOlNgaC813yFIEEjabliKqsZdT7dSp99K0HQTonrTmgkcYRXknZURVH/eHNPUX63w9qu8iazioLrnrSWupJs2c91Atprs8wQ280UqdSOI/VZhwRBB/WAzpigwE8S7xKU+pggKPAi8O4cFIICLwTvEnRQFz0EBT43vFNQNJKAl4J3CXq8PaCPHoICnxfeJSgaScCLwbtzUAgKvBC8S1C/8140koCXgXcJerTpoZEEvAy8MwdNFUOdJtsAfnbwEBR40XinoOgHBV4K3iXo8faaasgP6mwa6jTZBvCzg3cJSmpW1/x2/3HHQ50m2wB+dvBJgtaXMGgOeAF4l6B+le0cMHPDUKfJNoCfHbxTULoYX/Xmz/fzE4ICnwfeKWiqGOo02QbwY8ObaVG8cvcIKfu+HR97avZ3DVd586URhllBUOD7Bs/nQ5HkVo+gvH+td8h02qnW4gFBge8bIwmqstDeIdPjE5R7mdQ5B4ycG+o02QbwY8PHBI3Ob/Yiz1jhzT1Hk6FFZ0pb1TP9lO1aM1Maz5DWXD6rR8TaWdQGzpSWQtBOaY3b8eion0V8VNDu+c1ogPX+pp0DLZzQggUN1tqZ0jgHNcvhLGqDZkpLIWh1yfxCN9MM4k2jh6dRic9vZt7XF2IzpdlGlRdOqWb21oJGjgxmUes3U9pgQXXGSYKio34G8dEcNDZ9lJ1qqrOyG51nwtZBaVmvtXsHdVA6MjqLWt+Z0tIKSgFBZxCfRtDoTGnB/sH8aU5Bo7OotfrNlDZY0HDEHIr4GcTHBI3Ob2YLatWKj86UFgpq17oEjc2ixpE0U1qKOmjdZJxoJM0i3tlICmaPLHAjKTpTWkRQszbcuxwcGZtFre9MaWm6map8jbNTQjfTDOKd3Ux27jPbzRSZKS0U1K6NzJRWCJajs6j1nSktVUc936884Eo8BAU+F7xL0HQx1GmyDeBnBw9BgReNh6DAi8ZDUOBF40cXFIHIMTA3E/Ai8S5BMbsd8GLwLkEHXeSEoMDnhnfnoJg8DHgbwQ11hf74N1+KvW0W+XYQfsBUV3Rd5oxcjIrja3S9yZmDpop+f9SUfQfAD4iIUkn4nkF2+mI937Lcf9ckQfX9JBAU+MExkqAPkXe1hxb3zO2iSbsmCap3cwta97wzgyqi/f6gKfwOgO8Tkdvnl8wYpd3gTpJwCJK9u4QPKX74Q3stely5qSHQTfpnPXpupL17xNwSGghK607SnU48uIl+F1rNkkvQKj2Oe9Dz5vL+kICfHF4LyrffbZsxSuGApXAIkl3HhxQf/u3dVvNd/6YF1aOV9Ogkcydfy9zGbAXldfXFvWBwE99Qau9Z6upmop4m3FEPvAlzm5y5YZlHFnUPWOInOJt1fEixXCu3GqsNI2h8tJIdpER7WkF53dFGORjcRIKuWAchKPDJYQTlIR9mUEf3eJDgOeX2aeTFcqPQ2ik3uA4ajlba5ztG7SAl2tMKGq6LDG7asWJ29YN+lRzt/7SkvD8k4CeHH03Q/Q996YM0PiQ2WskIGmnbB4LSOr9rcFNCI6lNKg94mlfeHxLwk8MbQanjqG3GKHUPWGJB5yrRIr71F2cLJG0wWskMOo4MUqIIinha53cNbkI3E/ApoquRRO96ByyVuxpJZVVor7KgdrRStJGkBym1WtFGklrXnqtEBzc1Flx1UAgKfDy6upmMrvEBSzteId7NpMfMUX4YjFY6GxxiBilZqmc7qeYr8cFNDUcdtDroIicEBX6USDOVWIpr8dVTl4OhxxAU+Ozw2QjKN4OmuSN0TH9FmgB+KvHZCMo3g6Z5IPeY/oo0Afzs4CHoGPCm2h+d3IVuHavpZgHhezKTWtdkBmlyG3dI/3CGxEPQMeB1x0kjYih1wtjpiFyC8myb0QMgqF0BQbPHa0Gjt5EFM2m1HIKqzHOL1dwJr69AULuiV1DPBq7FjxihoKaXkO5I+xZ9+5idJzuY+agVXpWmCHYwt6YFt7Yt2BvREibPziz1svA9gqaOoU6TbUjHmyLe3PoYnYuQinlf30oWXHYJ7pekiE6kHUy/Hcyg3W/y7MxS3z8gaIqQjjeNJHpqQJegdCuZrxbeeMvCZ9Xm/Y25P2+Z+yX1qB+1w5svBbem/YD3I8Gtbfsb3/2kmTy7u0XlTL29Tp5xQNAUIR2vc1AaL9Yzm6u5leyNt8x9mjLY4olPBDNomwFm/6nvNSMX/6f4Dj7I3Ij2XRWePJuvWat1A56T0UiYw/gmA4KmCOl40zzqutdHF/FzFZ2D/tC76U70nyZBg+B7Lk68jfZmQffNBWl9c5q5W42rpkrXWu9otFjqIegwp8k2pOOTBaV6qd+gHPRHf3KucvDJ31VFPFUIbquYptTPfPP3e967T7z996hp9JsqL/2+SrRhpeK/v/cdplbQ6no0UfCeZ5o9a4dhmLpGdJcB7ayxfjhD4iHoGPBhK54eLXSwNRcKqqqOnSIJ+mO/9VOF5g/++jdxU+jg529Ttc5v/Y1C7ba5J5efLJ74nm8vLn556xsLrX898Yn9jYe3Fv924bMn3vZpyhTf+M6fsIJ2P5qI39fplc4cNMX0E4rCoUMD21lj/XCGxPcIim6mzBpJZCllWB8+HdZBVS1y/qmN8htveU/tYbXXty3u6YE832AHPv4C32v21p8zt6b911vfo9pNfHPak8sVqsCeePuuFbT70UT8vmNG/Ggb408oMlWHiX44Q+KdOSjfzISHKIwRHxmx4xo7EW0axcfomKqobVfFH01k33P1VN+6HntCkb5tM/khRWlTP8ZIJahRE4PmxoePjNhJFtS0guJjdIIrpvunK92PJuL3neWYoNEnFGlC8kOK0qZ+jAFBZeCjI3Ycg3vCUT+t7jE6gbi18IFF9lB+T4Mm7JDgricUWULSQ4rSpn6MMVQRj1GdY8NHRuy4BveYUT963E7sAUStVqQftPvRRPy+NKcfaGQbSZEnFNk66c104IsQVI/qHHDP8lCnyTamHx8dseMY3BOO+pnrGqPDsWOvJPU+msibe4FvnIp1M9knFPEZ+12FSpn6MQa6mYCfLjwEBV403i0oZrcDXgjeKShmtwNeCt4lKCYPA14MHoICLxrvLOIxux3wUvBOQTG7HfBS8G5B08RQp8k2gJ8dvEvQo81BV5EgKPA54Z056PH24NtBISjweeCdghpL0YoHfuL4JEHbuFkEeAl4p6CqiB/8ONmhTpNtAD87eJegeBw38GLwzhzUryIHBV4G3i2o73dKqIMCLwCfJChlo6YVf219/f5LvHT96fUHrkJQ4HPEOwVV2Wd4rfPw0Uv+lQdp6caFc2YJggKfE94l6NFm93V4klRloM9eMksQFPic8H2K+EjofPPwsav+9WcuqqU7VfQ9AIHINnqGfETuZjp85D6y0r/2gBWUYqj/B9kG8LODdwraMy5eaxnmoBAU+JzwLkEdM4u8es5HHRT4CeAHCxoW7DcuPI5WPPD54lMU8VfW11UdlLJO9IMCL0LQrkaSO4Y6TbYB/Ozg3YKmiaFOk20APzt4CAq8aHyPoJgCHHhJeOSgwIvGQ1DgReN7BEURD7wkPHJQ4EXj+wn698hBgZ80PlFQVdSjiAd+4vgEQet4iALwIvAuQbmd1H96ZQgKfD74XkFV5jl/3q9CUOAl4HsENffaQVDgReB7c9A2Vz8hKPAi8L2CmtkXISjwEvAuQYNsFIICP2l8gqCcjaIfFPiJ4xMFVfG/EBT4SeP7Cdo/hjpNtgH87OAhKPCi8RAUeNF4CAq8aLxTUH5YJx5DA7wAvFPQ6hLN3VDH47iBnzjeJeiRflg8nnYM/OTxCYLSvDcQFPjJ412CHm+vtQffcTfUabIN4GcH7xKU5qhf8qsDnkQz1GmyDeBnB+8UNFUMdZpsA/jZwUNQ4EXjewTFxA3AS8IjBwVeNB6CAi8a7xTUPGkORTzwE8e7BD3eXjvePjPoodxDnSbbAH528C5BSc3qmt/u3xE61GmyDeBnB58kaB3X4oGXgHcJShc5lZ115KDATxzvFFRVQv0qTYADQYGfMN4paKoY6jTZBvCzg4egwIvGuwXFk+aAF4J3CtrzOG4ICvyE8C5BHY/jhqDATwYPQYEXjXcJiiIeeDF4p6BoJAEvBe8WFIEQFugHBV4kHoICLxrvEJTvths8S/1Qp8k2gJ8dfK+gndIa38+EG5aBH4g/2DIDLAupAeaQsnvj9iq/Npcr9nw9gvKEIvQLt9sBnwYfypQqDrbIwYbbUCto5HzdguqMkwRFRz3wafAjCap/61D5abAxraAUEBT4NHgjaLOoRFtV755QC6v0rqzenPW8xb1gI0VEUL2WS/xWjSsJ0SJ+f8Obe2LFOhgISjcr60ARD3wavBZ0f0OV2bWF3WZRCVkjK/nNwu7BViHYSLubIl7tYNayoAdbXORHBN3fWFV7LPQIqq9zxrJSCAp8H7wW9Gt7erFZLFPWWI68Wa7YjbS7aSQpW81afttc0faGgjbI55pDUL/KYz06JXQzAZ8Gb+ugDeXZXIXf2V/8yhml3ki76Rx0f4NKfr02LOGjgta4atBbxPtm3oYBI5IgKPAmbBGv/LNOdgtqN9LupnmkMshgbXPlL3UJn1LQdDHcX5FpAC8Jr8VrcI7YnYNyEb+yazfS7qGgwdqDrZ/VJXxPEd9wFfEQFPhh8EZQyg2LPYLqRpLdSLuHrfhwbc129KdpJEFQ4IfCm6J7R1Unn9oodxXxZ/VFJrOR9jONpNXoWs5peeO23mi7mc5CUODHiE/bh2/a8L34xqLt6oSgwGePTytoLbh+FOJ15bRgdYOgwGePTyco9+334mt8DwoEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40PoWgh4+sr5/jpRsX1u+7CEGBzxE/WNDrz1z0Dz/OXr56zr/2wFUICnx++MGCXntQq6lUffYSinjg88WnKOJNLqrK+sf+2hTxd6roewACkW30FfTGhcfp5fCRc0pSFPHA54hPI+j1p9lPllPnpRAU+JzwKQSljFOL+gcQFPic8YMFDfzkphKKeOBzxQ8W9Mo6xbnDRy+psn79/qAhP9Rpsg3gZwefoohPiKFOk20APzt4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNH40QVF3BJxvO1RnHFs+vrLwxzRuet85omLBHLQGcUfbK2q3w2v3LOluVxx4pOPyCBQxAMfD62b/h0Ph6Aq4/T7HJFBQFDg4xHR7WDL8wrqTbOoRCzT71W7rrn8RNHTETmiufIpb+FF8ljJzP9or7IlZJJ6CDrjeFNgL+6ppQL/cM7ZLJbpNVhXVDvUooLSEc1iwWS0RlDea2HXErJIPQSdcTxlkSoWdlsN9UO/miu7vIU0C9aRbU0rqD1Cr40Kqt9bQhaph6Azjtf54f7G4h7liazbjinpSVCzzlgYqYPSEdbNsIivxAhZpB6CzjjeNHZULhkISvZ5uqDuErQStuI5X00S1BCySD0EnXF8RNC5SkuX6S0SjOugdt3QgjIhi9RD0BnHh21y2yBiR5VmZFi84RQVlFvxtGJ/gw6diwpqCVmkHoLOON40eVZbYTdTQ72nnHPHK4TdTFFB7RHaQepT+vDpWA5qCRmkHoICLxoPQYEXjYegwIvGQ1DgReMhKPCi8RAUeNF4CAq8aDwEBV40HoICLxoPQYEXjYegwIvGjy5ov7gzU1regdRPLhJTD0HDQOonFxA0RSD1kwsImiKQ+slFToIiEBkHBEWIDgiKEB0QFCE6IChCdGQj6OEj6+vneOn60+sPXM2EmV+Eqb+yvr5+/6UJJ2fIuBYkeRo/+zD1CZ99JoJef+aif/jxi2rpxoVz/pUHs2DmF2Hq/VfPTToxQ8fho5fMJz6Nn32Y+qTPPhNBrz1oT3D92Ut80mmKMPU3Pndx0okZKfQnPo2fPYVOc9Jnn1kdlPIhdbLHrpql6QqdZlVG2sJ+qkLnQdP62evUJ332WQl648Lj9HLtgan8kEzqqaCfvlz08JH7OMnT+dnb1Cd99hkJev3px/XppvJ/sU09xxTWQ2+F0ovD8dln1Yo35KmsBwWp55hCQae3/s8RfuLjEjT8hqmsnLqWZJB6KiRv/NV0fcVhwT6Nn32Y+qTPPhNBqQtL1XDpv+8U9sVFUq8W75u2MlKneUo/+0jqEz57XElCiA4IihAdEBQhOiAoQnRAUITogKAI0QFBE6Ke8Czgnof70o7zqR742z75Cr2YpwYnHJN03lkNCOqM422Sqe2t9WzpFrSud0yjVCDoWnBg+vPOakBQZxiX6qcud2/pEvR4m9Ws9u6YCDWCHm06pE4+76wGBHWFccgse96Seu2UVNm7xoLy4pnuPe2O5rXz3j/2Tr5Cb0i6o01v/rkeQc1WvWvXeYPz/alaWKN3Z3x7wAwFBHVFJHc73l7iH16limUlKGeinZLepe2Z8tjuZA/olJb0SsoPjzbX1MaYoFWyV2/lXbvOG5yvpHLTuke/wgPy+hwEBAR1hVGQWjJc6Kpf/3dZr6d/743lYdSsWQrLfnsAG9zWuecZfq3HGknqjd1qZY+eNzgfbdO/7jpvD8j1w5hsQFBXWAfICcqvWJw2N71psarL8uj+py6b6qNvD+BjuE2u8ljO9YzYYTlutwb12sh5o+fz7S97QA4fgZSAoK6wDkUEPdqcPx94R1XKWFXQ5m5+t6CmOE4Q1GwNBI2cN3a+QNCZKt05IKgzTGlM3lF/pZKPvWubHM0PMjvzNjCX99FFPOeC8/Fyn5ZDQe3WsGcgct7o+eyvdt8PSOoAAACjSURBVLoO11spIKg7qro/8tRl2+YhNzolFoZFs1JVyRm7U/SHdzjeVp6pQ482l7obSX64NdJ1FZw3cr5QUHtA/p/HxAKCJkTbXtGxvUeq4jn/gmrQKFfa0QtBdVsr7O5mYuvoDe3a283kh1ujfavBeSPnCwQNcLMTEBQhOiAoQnRAUITogKAI0QFBEaIDgiJEBwRFiA4IihAdEBQhOiAoQnT8Pxu+10rBvMciAAAAAElFTkSuQmCC" /><!-- --></p>
+<p>Let’s look at the overall distribution of player scoring for the Red Wings and Bruins. Is there a noticeable difference?<br />
+There appear to be more high-scoring members on the Bruins than the Red Wings.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" title="1"><span class="co"># Red Wings teamId=17, Bruins teamId=6 (teams.df), which corresponds to franchId=12 and 6 (dataframe f)</span></a>
+<a class="sourceLine" id="cb30-2" title="2">redwings.df &lt;-<span class="st"> </span><span class="kw">getNHLData</span>(<span class="dt">funcType=</span><span class="st">&quot;skater&quot;</span>, <span class="dt">franchId=</span><span class="dv">12</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(activePlayer<span class="op">==</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb30-3" title="3">bruins.df &lt;-<span class="st"> </span><span class="kw">getNHLData</span>(<span class="dt">funcType=</span><span class="st">&quot;skater&quot;</span>, <span class="dt">franchId=</span><span class="dv">6</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(activePlayer<span class="op">==</span><span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb30-4" title="4"><span class="co"># Make sure to filter by active members only!</span></a>
+<a class="sourceLine" id="cb30-5" title="5"></a>
+<a class="sourceLine" id="cb30-6" title="6">g6 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>redwings.df, <span class="kw">aes</span>(<span class="dt">x=</span>points)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb30-7" title="7"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;Points per Skater in the Detroit Red Wings&quot;</span>)</a>
+<a class="sourceLine" id="cb30-8" title="8">g6 <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth=</span><span class="dv">50</span>, <span class="dt">color=</span><span class="st">&quot;red&quot;</span>, <span class="dt">fill=</span><span class="st">&quot;red&quot;</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" title="1">g7 &lt;-<span class="st"> </span><span class="kw">ggplot</span>(<span class="dt">data=</span>bruins.df, <span class="kw">aes</span>(<span class="dt">x=</span>points)) <span class="op">+</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb31-2" title="2"><span class="st">  </span><span class="kw">labs</span>(<span class="dt">title=</span><span class="st">&quot;Points per Skater in the Boston Bruins&quot;</span>)</a>
+<a class="sourceLine" id="cb31-3" title="3">g7 <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>(<span class="dt">binwidth=</span><span class="dv">50</span>, <span class="dt">color=</span><span class="st">&quot;gold&quot;</span>, <span class="dt">fill=</span><span class="st">&quot;gold&quot;</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+
+</body>
+</html>

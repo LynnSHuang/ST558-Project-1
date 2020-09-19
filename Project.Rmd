@@ -3,7 +3,7 @@ title: "ST558 Project 1: NHL Records & Stats Analysis"
 author: "Lynn Huang"
 date: "September 18, 2020"
 output:
-  rmarkdown::github_document
+  rmarkdown::github_document:
     toc: true
 ---
 # Getting Started with NHL Records & NHL Stats APIs
@@ -31,7 +31,7 @@ library(jsonlite)
 library(ggplot2)
 # Include this in console execution ONLY to make your GitHub page:
 #setwd("C:/Users/lynn/Documents/GitHub//ST558-Project-1/")
-#rmarkdown::render(“Project.Rmd”, output_file=“README.md”)
+#rmarkdown::render("Project.Rmd", output_file="README.md")
 #fid <- c(1, 2)
 #fn <- c("Montréal Canadiens", "Montreal Wanderers")
 ```
@@ -422,7 +422,7 @@ pts = rep(NA, n)
 goalsPerGame = rep(NA, n)
 goalsAgainstPerGame = rep(NA, n)
 for (i in 1:n) {
-  team <- getNHLData("stats", teamStats=TRUE, teamId=tids[i])
+  team <- getNHLData("stats", teamStats=TRUE, teamId=id[i])
   div[i]                 <- team$division$name
   conf[i]                <- team$conference$name
   gamesPlayed[i]         <- team$teamStats[[1]]$splits[[1]]$stat$gamesPlayed[1]
