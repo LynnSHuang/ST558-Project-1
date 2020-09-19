@@ -377,218 +377,38 @@ s.act <- s %>% filter(activePlayer=TRUE) %>% select(-link)
 # Join by playerId (called id in s.act) to get goalie and skater info about current team roster
 roster.Info.g <- left_join(s.act %>% filter(type=="Goalie"), fg.act, by=c("id"="playerId"))
 roster.Info.fk <- left_join(s.act %>% filter(type!="Goalie"), fk.act, by=c("id"="playerId"))
-roster.Info.g
+roster.Info.g %>% select(id, fullName, gamesPlayed, losses, ties, wins)
 ```
 
-    ##        id        fullName s[[1]]$jerseyNumber code   name   type abbreviation firstName gameTypeId gamesPlayed
-    ## 1 8471734  Jonathan Quick                  32    G Goalie Goalie            G  Jonathan          2         644
-    ## 2 8477361 Calvin Petersen                  40    G Goalie Goalie            G      <NA>         NA          NA
-    ##   lastName losses mostGoalsAgainstDates mostGoalsAgainstOneGame mostSavesDates mostSavesOneGame
-    ## 1    Quick    240            2019-10-09                       8     2010-12-13               51
-    ## 2     <NA>     NA                  <NA>                      NA           <NA>               NA
-    ##   mostShotsAgainstDates mostShotsAgainstOneGame mostShutoutsOneSeason mostShutoutsSeasonIds mostWinsOneSeason
-    ## 1            2010-12-13                      51                    10              20112012                40
-    ## 2                  <NA>                      NA                    NA                  <NA>                NA
-    ##   mostWinsSeasonIds overtimeLosses positionCode rookieGamesPlayed rookieShutouts rookieWins seasons shutouts
-    ## 1          20152016             67            G                44              4         21      13       52
-    ## 2              <NA>             NA         <NA>                NA             NA         NA      NA       NA
-    ##   ties wins
-    ## 1    0  325
-    ## 2   NA   NA
+    ##        id        fullName gamesPlayed losses ties wins
+    ## 1 8471734  Jonathan Quick         644    240    0  325
+    ## 2 8477361 Calvin Petersen          NA     NA   NA   NA
 
 ``` r
-roster.Info.fk
+roster.Info.fk %>% select(id, fullName, name, type, gamesPlayed, goals, points, seasons)
 ```
 
-    ##         id           fullName s[[1]]$jerseyNumber code       name       type abbreviation  id.y assists
-    ## 1  8470604        Jeff Carter                  77    C     Center    Forward            C 30297     178
-    ## 2  8470606       Dustin Brown                  23    R Right Wing    Forward           RW 30301     354
-    ## 3  8471685       Anze Kopitar                  11    C     Center    Forward            C 30974     617
-    ## 4  8473453       Trevor Lewis                  22    C     Center    Forward            C 31227      93
-    ## 5  8474563       Drew Doughty                   8    D Defenseman Defenseman            D 31695     385
-    ## 6  8476924         Martin Frk                  29    R Right Wing    Forward           RW 33835       2
-    ## 7  8476947 Nikolai Prokhorkin                  74    L  Left Wing    Forward           LW 33769      10
-    ## 8  8477018         Ben Hutton                  15    D Defenseman Defenseman            D 33726      12
-    ## 9  8477046        Joakim Ryan                   6    D Defenseman Defenseman            D 33745       4
-    ## 10 8477073   Kurtis MacDermid                  56    D Defenseman Defenseman            D 32682       9
-    ## 11 8477960       Adrian Kempe                   9    C     Center    Forward            C 32885      62
-    ## 12 8478020     Michael Amadio                  10    C     Center    Forward            C 32903      21
-    ## 13 8478455      Austin Wagner                  51    L  Left Wing    Forward           LW 33361      14
-    ## 14 8478911           Matt Roy                   3    D Defenseman Defenseman            D 33532      18
-    ## 15 8479675       Trevor Moore                  12    C     Center    Forward            C 33864       2
-    ## 16 8479998     Mikey Anderson                  44    D Defenseman Defenseman            D 33930       0
-    ## 17 8480014    Gabriel Vilardi                  42    C     Center    Forward            C 33889       4
-    ## 18 8480113       Alex Iafallo                  19    L  Left Wing    Forward           LW 33073      60
-    ## 19 8480336        Sean Walker                  26    D Defenseman Defenseman            D 33403      26
-    ## 20 8481481      Blake Lizotte                  46    C     Center    Forward            C 33610      17
-    ##    firstName gameTypeId gamesPlayed goals   lastName
-    ## 1       Jeff          2         540   186     Carter
-    ## 2     Dustin          2        1183   299      Brown
-    ## 3       Anze          2        1073   333    Kopitar
-    ## 4     Trevor          2         674    70      Lewis
-    ## 5       Drew          2         919   117    Doughty
-    ## 6     Martin          2          17     6        Frk
-    ## 7    Nikolai          2          43     4 Prokhorkin
-    ## 8        Ben          2          65     4     Hutton
-    ## 9     Joakim          2          35     1       Ryan
-    ## 10    Kurtis          2          90     4  MacDermid
-    ## 11    Adrian          2         256    41      Kempe
-    ## 12   Michael          2         148    16     Amadio
-    ## 13    Austin          2         127    18     Wagner
-    ## 14      Matt          2          95     6        Roy
-    ## 15    Trevor          2          15     3      Moore
-    ## 16     Mikey          2           6     1   Anderson
-    ## 17   Gabriel          2          10     3    Vilardi
-    ## 18      Alex          2         227    41    Iafallo
-    ## 19      Sean          2         109     8     Walker
-    ## 20     Blake          2          66     6    Lizotte
-    ##                                                                                                                                                                                          mostAssistsGameDates
-    ## 1                                                                                                                                                  2014-10-26, 2014-12-18, 2015-02-12, 2016-03-17, 2017-04-08
-    ## 2                                                                                                                                                                                      2010-01-26, 2017-10-21
-    ## 3                                                                                                                                                                          2007-12-06, 2014-12-18, 2015-12-28
-    ## 4                                                              2010-11-20, 2011-03-29, 2012-03-17, 2013-02-19, 2013-03-16, 2015-03-03, 2015-12-29, 2016-11-23, 2017-10-18, 2017-11-30, 2017-12-30, 2018-02-07
-    ## 5                                                                                                                                                                                                  2010-01-04
-    ## 6                                                                                                                                                                                      2020-02-12, 2020-03-09
-    ## 7                                                                                                                                                                                                  2019-12-27
-    ## 8                                                                                                                                                                                                  2020-03-01
-    ## 9                                                                                                                                                              2019-10-12, 2019-12-06, 2020-02-15, 2020-02-18
-    ## 10                                                                                                                                                                                                 2017-11-30
-    ## 11                                                                                                                                                             2017-03-04, 2018-02-20, 2018-03-12, 2020-02-23
-    ## 12                                                                                                                                                                                                 2018-12-08
-    ## 13                                     2018-11-21, 2018-11-30, 2018-12-06, 2018-12-15, 2019-01-10, 2019-02-21, 2019-02-25, 2019-03-23, 2019-04-05, 2019-10-27, 2019-11-09, 2019-11-25, 2019-12-21, 2020-02-09
-    ## 14                                                                                                                                                                                                 2019-12-10
-    ## 15                                                                                                                                                                                     2020-02-26, 2020-03-01
-    ## 16                                                                                                                                     2020-02-29, 2020-03-01, 2020-03-05, 2020-03-07, 2020-03-09, 2020-03-11
-    ## 17                                                                                                                                                             2020-02-20, 2020-02-26, 2020-03-09, 2020-03-11
-    ## 18                                                                                                             2017-10-21, 2017-11-07, 2019-03-21, 2019-11-25, 2019-12-15, 2019-12-28, 2020-02-15, 2020-03-07
-    ## 19                                                                                                                                                                                     2019-12-14, 2020-01-06
-    ## 20 2019-10-08, 2019-10-19, 2019-10-24, 2019-11-02, 2019-11-09, 2019-11-25, 2019-11-27, 2019-12-10, 2019-12-14, 2019-12-21, 2019-12-31, 2020-02-06, 2020-02-09, 2020-02-12, 2020-02-20, 2020-02-26, 2020-02-29
-    ##    mostAssistsOneGame mostAssistsOneSeason mostAssistsSeasonIds
-    ## 1                   3                   38             20152016
-    ## 2                   3                   33             20172018
-    ## 3                   4                   57             20172018
-    ## 4                   2                   16             20142015
-    ## 5                   4                   50             20172018
-    ## 6                   1                    2             20192020
-    ## 7                   2                   10             20192020
-    ## 8                   2                   12             20192020
-    ## 9                   1                    4             20192020
-    ## 10                  2                    5             20192020
-    ## 11                  2                   21   20172018, 20192020
-    ## 12                  2                   10             20192020
-    ## 13                  1                    9             20182019
-    ## 14                  2                   14             20192020
-    ## 15                  1                    2             20192020
-    ## 16                  0                    0             20192020
-    ## 17                  1                    4             20192020
-    ## 18                  2                   26             20192020
-    ## 19                  2                   19             20192020
-    ## 20                  1                   17             20192020
-    ##                                                                                mostGoalsGameDates
-    ## 1                                                                          2013-03-04, 2018-03-29
-    ## 2                                                                                      2018-04-05
-    ## 3                                                                                      2018-03-22
-    ## 4                                                                                      2014-01-16
-    ## 5                                                                                      2011-02-02
-    ## 6                                                                                      2019-12-27
-    ## 7                                                  2019-11-16, 2019-11-23, 2019-11-30, 2019-12-02
-    ## 8                                                  2019-10-26, 2020-01-09, 2020-02-06, 2020-02-20
-    ## 9                                                                                      2019-11-30
-    ## 10                                                 2017-10-26, 2019-10-22, 2019-12-02, 2020-02-12
-    ## 11                                                                                     2017-10-18
-    ## 12                                                                                     2018-02-17
-    ## 13                                                                         2018-12-18, 2019-02-11
-    ## 14                         2019-03-21, 2019-04-06, 2019-11-02, 2019-11-27, 2019-12-07, 2019-12-17
-    ## 15                                                             2020-02-09, 2020-02-20, 2020-03-07
-    ## 16                                                                                     2020-03-09
-    ## 17                                                             2020-02-20, 2020-03-07, 2020-03-11
-    ## 18                                                                                     2020-01-30
-    ## 19 2018-12-31, 2019-03-02, 2019-03-18, 2019-10-08, 2019-10-09, 2019-10-27, 2019-11-12, 2020-02-12
-    ## 20                         2019-11-09, 2019-11-16, 2019-12-04, 2019-12-17, 2020-02-26, 2020-03-07
-    ##    mostGoalsOneGame mostGoalsOneSeason mostGoalsSeasonIds mostPenaltyMinutesOneSeason
-    ## 1                 3                 32           20162017                          44
-    ## 2                 4                 33           20072008                          80
-    ## 3                 4                 35           20172018                          32
-    ## 4                 2                 14           20172018                          30
-    ## 5                 2                 16           20092010                          69
-    ## 6                 2                  6           20192020                           4
-    ## 7                 1                  4           20192020                           6
-    ## 8                 1                  4           20192020                          14
-    ## 9                 1                  1           20192020                          10
-    ## 10                1                  3           20192020                          57
-    ## 11                3                 16           20172018                          50
-    ## 12                2                  6 20182019, 20192020                          10
-    ## 13                2                 12           20182019                          39
-    ## 14                1                  4           20192020                          10
-    ## 15                1                  3           20192020                           2
-    ## 16                1                  1           20192020                           0
-    ## 17                1                  3           20192020                           4
-    ## 18                3                 17           20192020                          22
-    ## 19                1                  5           20192020                          26
-    ## 20                1                  6           20192020                          20
-    ##    mostPenaltyMinutesSeasonIds                                                    mostPointsGameDates
-    ## 1                     20132014                         2014-10-26, 2014-12-18, 2015-10-22, 2017-02-09
-    ## 2                     20052006 2010-04-01, 2010-12-21, 2012-02-25, 2017-10-21, 2018-04-05, 2020-03-07
-    ## 3                     20082009                                                             2014-12-18
-    ## 4                     20162017                                                 2015-03-03, 2015-12-29
-    ## 5                     20112012                                                             2010-01-04
-    ## 6                     20192020                                                             2019-12-27
-    ## 7                     20192020                                                             2019-12-27
-    ## 8                     20192020                                                 2020-02-06, 2020-03-01
-    ## 9                     20192020             2019-10-12, 2019-11-30, 2019-12-06, 2020-02-15, 2020-02-18
-    ## 10                    20172018                                                 2017-11-30, 2020-02-12
-    ## 11                    20182019                                                             2017-10-18
-    ## 12                    20192020             2018-01-21, 2018-02-17, 2018-12-08, 2019-10-12, 2019-11-21
-    ## 13                    20192020                         2018-11-21, 2018-12-18, 2019-02-11, 2019-02-25
-    ## 14                    20192020                                                             2019-12-10
-    ## 15                    20192020             2020-02-09, 2020-02-20, 2020-02-26, 2020-03-01, 2020-03-07
-    ## 16                    20192020                                                             2020-03-09
-    ## 17                    20192020                                                 2020-02-20, 2020-03-11
-    ## 18                    20182019                                                             2020-01-30
-    ## 19                    20192020                                     2019-11-12, 2019-12-14, 2020-01-06
-    ## 20                    20192020                                                 2019-11-09, 2020-02-26
-    ##    mostPointsOneGame mostPointsOneSeason mostPointsSeasonIds penaltyMinutes points positionCode rookiePoints
-    ## 1                  4                  66            20162017            231    364            C           NA
-    ## 2                  4                  61            20172018            700    653            R            5
-    ## 3                  5                  92            20172018            294    950            C           61
-    ## 4                  3                  26            20172018            171    163            C           13
-    ## 5                  4                  60            20172018            635    502            D           27
-    ## 6                  2                   8            20192020              4      8            R           NA
-    ## 7                  2                  14            20192020              6     14            L           14
-    ## 8                  2                  16            20192020             14     16            D           NA
-    ## 9                  1                   5            20192020             10      5            D           NA
-    ## 10                 2                   8            20192020            115     13            D            4
-    ## 11                 4                  37            20172018            134    103            C           37
-    ## 12                 2                  16            20192020             24     37            C            8
-    ## 13                 2                  21            20182019             55     32            L           21
-    ## 14                 2                  18            20192020             18     24            D           18
-    ## 15                 1                   5            20192020              2      5            C            5
-    ## 16                 1                   1            20192020              0      1            D            1
-    ## 17                 2                   7            20192020              4      7            C            7
-    ## 18                 3                  43            20192020             48    101            L           25
-    ## 19                 2                  24            20192020             34     34            D           10
-    ## 20                 2                  23            20192020             20     23            C           23
-    ##    seasons
-    ## 1        9
-    ## 2       16
-    ## 3       14
-    ## 4       12
-    ## 5       12
-    ## 6        1
-    ## 7        1
-    ## 8        1
-    ## 9        1
-    ## 10       3
-    ## 11       4
-    ## 12       3
-    ## 13       2
-    ## 14       2
-    ## 15       1
-    ## 16       1
-    ## 17       1
-    ## 18       3
-    ## 19       2
-    ## 20       2
+    ##         id           fullName       name       type gamesPlayed goals points seasons
+    ## 1  8470604        Jeff Carter     Center    Forward         540   186    364       9
+    ## 2  8470606       Dustin Brown Right Wing    Forward        1183   299    653      16
+    ## 3  8471685       Anze Kopitar     Center    Forward        1073   333    950      14
+    ## 4  8473453       Trevor Lewis     Center    Forward         674    70    163      12
+    ## 5  8474563       Drew Doughty Defenseman Defenseman         919   117    502      12
+    ## 6  8476924         Martin Frk Right Wing    Forward          17     6      8       1
+    ## 7  8476947 Nikolai Prokhorkin  Left Wing    Forward          43     4     14       1
+    ## 8  8477018         Ben Hutton Defenseman Defenseman          65     4     16       1
+    ## 9  8477046        Joakim Ryan Defenseman Defenseman          35     1      5       1
+    ## 10 8477073   Kurtis MacDermid Defenseman Defenseman          90     4     13       3
+    ## 11 8477960       Adrian Kempe     Center    Forward         256    41    103       4
+    ## 12 8478020     Michael Amadio     Center    Forward         148    16     37       3
+    ## 13 8478455      Austin Wagner  Left Wing    Forward         127    18     32       2
+    ## 14 8478911           Matt Roy Defenseman Defenseman          95     6     24       2
+    ## 15 8479675       Trevor Moore     Center    Forward          15     3      5       1
+    ## 16 8479998     Mikey Anderson Defenseman Defenseman           6     1      1       1
+    ## 17 8480014    Gabriel Vilardi     Center    Forward          10     3      7       1
+    ## 18 8480113       Alex Iafallo  Left Wing    Forward         227    41    101       3
+    ## 19 8480336        Sean Walker Defenseman Defenseman         109     8     34       2
+    ## 20 8481481      Blake Lizotte     Center    Forward          66     6     23       2
 
 It appears there’s no information about LA Kings’ goalie Calvin
 Petersen. Some quick Googling shows he actually plays mostly in the AHL
@@ -884,3 +704,9 @@ g7 + geom_histogram(binwidth=50, color="gold", fill="gold")
 ```
 
 ![](README_files/figure-gfm/Histogram-2.png)<!-- -->
+
+``` r
+# Include this in console execution ONLY to make your GitHub page:
+setwd("C:/Users/lynn/Documents/GitHub//ST558-Project-1/")
+rmarkdown::render("Project.Rmd", output_file="README.md")
+```

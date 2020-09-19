@@ -29,9 +29,6 @@ library(knitr)
 library(tidyverse)
 library(jsonlite)
 library(ggplot2)
-# Include this in console execution ONLY to make your GitHub page:
-#setwd("C:/Users/lynn/Documents/GitHub//ST558-Project-1/")
-#rmarkdown::render("Project.Rmd", output_file="README.md")
 #fid <- c(1, 2)
 #fn <- c("Montréal Canadiens", "Montreal Wanderers")
 ```
@@ -482,3 +479,10 @@ g7 <- ggplot(data=bruins.df, aes(x=points)) +
   labs(title="Points per Skater in the Boston Bruins")
 g7 + geom_histogram(binwidth=50, color="gold", fill="gold")
 ```
+
+```{r GitHub Render, eval=FALSE}
+# Include this in console execution ONLY to make your GitHub page:
+setwd("C:/Users/lynn/Documents/GitHub//ST558-Project-1/")
+rmarkdown::render("Project.Rmd", output_file="README.md")
+```
+
