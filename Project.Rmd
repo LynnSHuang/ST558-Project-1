@@ -318,8 +318,8 @@ s.act <- s %>% filter(activePlayer=TRUE) %>% select(-link)
 # Join by playerId (called id in s.act) to get goalie and skater info about current team roster
 roster.Info.g <- left_join(s.act %>% filter(type=="Goalie"), fg.act, by=c("id"="playerId"))
 roster.Info.fk <- left_join(s.act %>% filter(type!="Goalie"), fk.act, by=c("id"="playerId"))
-roster.Info.g
-roster.Info.fk
+roster.Info.g %>% select(id, fullName, gamesPlayed, losses, ties, wins)
+roster.Info.fk %>% select(id, fullName, name, type, gamesPlayed, goals, points, seasons)
 ```
 It appears there's no information about LA Kings' goalie Calvin Petersen. Some quick Googling shows he actually plays mostly in the AHL (American Hockey League) for the Ontario Reign team, which is the AHL affiliate of the LA Kings. This API is based on NHL data, and thus would miss out on Calvin Petersen's info.  
 Otherwise, the skater info seems to have populated well, with no such missing player info.  
